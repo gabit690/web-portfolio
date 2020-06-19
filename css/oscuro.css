@@ -1,0 +1,155 @@
+:root {
+  --modo-oscuro-fondo-principal-oscuro: #272343;
+  --modo-oscuro-borde-principal-oscuro: #4D4C7D;
+  --modo-oscuro-color-sombra: #000000;
+  --modo-oscuro-fondo-principal-claro: #FFFFFF;
+  --modo-oscuro-fondo-menu: #465881;
+  --modo-oscuro-color-boton-oscuro: #1B2A49;
+  --modo-oscuro-color-fondo-celda: #BCBAB8;
+  --modo-oscuro-color-borde-celda: #EEEEEE;
+}
+
+body.modo-oscuro {
+  background-color: var(--modo-oscuro-fondo-principal-oscuro);
+}
+
+body.modo-oscuro main {
+  outline-color: var(--modo-oscuro-borde-principal-oscuro);
+  color: var(--modo-oscuro-color-borde-celda);
+}
+
+body.modo-oscuro .titular {
+  border-top-color: var(--modo-oscuro-borde-principal-oscuro);
+  box-shadow: 0px 5px 10px 1px var(--modo-oscuro-borde-principal-oscuro);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+body.modo-oscuro #encabezado {
+  background-color: var(--modo-oscuro-fondo-principal-oscuro);
+}
+
+body.modo-oscuro #autor #foto-autor {
+  border: 0.5rem solid var(--modo-oscuro-borde-principal-oscuro);
+}
+
+body.modo-oscuro #descripcion-personal {
+  border-color: var(--modo-oscuro-borde-principal-oscuro);
+}
+
+body.modo-oscuro #boton-home {
+  color: var(--modo-oscuro-color-boton-oscuro);
+}
+
+body.modo-oscuro #menu-principal {
+  background-color: var(--modo-oscuro-fondo-menu);
+}
+
+body.modo-oscuro #luna {
+  color: var(--modo-oscuro-color-boton-oscuro);
+}
+
+body.modo-oscuro #menu-principal .boton-menu-principal {
+  background-color: var(--modo-oscuro-color-boton-oscuro);
+  box-shadow: inset 0px -5px 10px -3px var(--modo-oscuro-color-sombra);
+  color: var(--modo-oscuro-color-borde-celda);
+}
+
+body.modo-oscuro #menu-principal .boton-menu-principal:hover {
+  color: var(--modo-oscuro-color-boton-oscuro);
+  background-color: var(--modo-oscuro-fondo-menu);
+}
+
+body.modo-oscuro .boton-habilidades {
+  border-image: linear-gradient(
+    0deg, 
+    var(--modo-oscuro-fondo-menu) -10%,
+    var(--modo-oscuro-color-boton-oscuro), 
+    var(--modo-oscuro-fondo-menu)) 1;
+  background-color: var(--modo-oscuro-color-boton-oscuro);
+  color: var(--modo-oscuro-fondo-menu);
+  box-shadow: 0px 3px 10px 0px var(--modo-oscuro-color-sombra);
+}
+
+body.modo-oscuro .contenido-habilidades {
+  background-color: var(--modo-oscuro-color-fondo-celda);
+  border-right: 3px solid var(--modo-oscuro-color-borde-celda);
+  border-left: 3px solid var(--modo-oscuro-color-borde-celda);
+}
+
+body.modo-oscuro .habilidad {
+  background-color: var(--modo-oscuro-color-fondo-celda);
+  border-color: var(--modo-oscuro-color-borde-celda);
+}
+
+body.modo-oscuro .onda {
+  border-color: var(--modo-oscuro-color-borde-celda);
+}
+
+body.modo-oscuro .basico div:nth-child(3) {
+  border-color: var(--color-medidor-habilidad);
+}
+
+body.modo-oscuro .intermedio div:nth-child(3), .intermedio div:nth-child(2) {
+  border-color: var(--color-medidor-habilidad);
+}
+
+body.modo-oscuro .avanzado div:nth-child(3), .avanzado div:nth-child(2), .avanzado div:nth-child(1) {
+  border-color: var(--color-medidor-habilidad);
+}
+
+body.modo-oscuro #proyectos-realizados i {
+  color: var(--modo-oscuro-color-borde-celda);
+}
+
+body.modo-oscuro #proyectos-realizados .deshabilitado {
+  color: var(--modo-oscuro-fondo-menu);
+}
+
+body.modo-oscuro #proyectos-web .tarjeta-proyecto {
+  box-shadow: -3px 3px 10px 3px var(--modo-oscuro-fondo-menu);
+}
+
+
+body.modo-oscuro .nombre-proyecto {
+  background-color: var(--modo-oscuro-color-boton-oscuro);
+  color: var(--modo-oscuro-color-borde-celda);
+}
+
+body.modo-oscuro #seccion-contacto #formulario-contacto {
+  border-color: var(--modo-oscuro-borde-principal-oscuro);
+  background-color: var(--modo-oscuro-color-boton-oscuro);
+}
+
+body.modo-oscuro #formulario-contacto input {
+  box-shadow: 0px 0px 10px 3px var(--modo-oscuro-borde-principal-oscuro);
+}
+
+body.modo-oscuro #formulario-contacto textarea {
+  box-shadow: 0px 0px 10px 3px var(--modo-oscuro-borde-principal-oscuro);
+}
+
+body.modo-oscuro #botones-contacto button {
+  color: var(--modo-oscuro-fondo-principal-oscuro);
+}
+
+body.modo-oscuro #seccion-contacto #mensaje-enviado {
+  border-color: var(--modo-oscuro-borde-principal-oscuro);
+  background-color: var(--modo-oscuro-color-boton-oscuro);
+}
+
+body.modo-oscuro #mensaje-enviado i {
+  color: var(--modo-oscuro-fondo-menu);
+}
+
+body.modo-oscuro footer {
+  border-color: var(--modo-oscuro-borde-principal-oscuro);
+  background-color: var(--modo-oscuro-fondo-principal-oscuro);
+}
+
+body.modo-oscuro #redes i {
+  color: var(--modo-oscuro-fondo-menu);
+}
+
+body.modo-oscuro #prestamo a {
+  color: var(--modo-oscuro-borde-principal-oscuro);
+}

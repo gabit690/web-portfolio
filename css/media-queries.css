@@ -1,0 +1,256 @@
+@media (min-width: 800px) {
+      
+    .titular {
+        height: 75px;
+        font-size: 3rem;
+    }
+
+    /* ------ ------ ------ HEADER ------ ------ ------ */
+  
+    #particles-js {
+        position: absolute;
+        display: block;
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    #datos-personales #nombre {
+        font-size: 3.6rem;
+    }
+    
+    #datos-personales #profesion {
+        font-size: 2.3rem;
+        margin-top: 20px;
+    }
+    
+    #datos-personales #direccion {
+        font-size: 1.5rem;
+        margin-top: 20px;
+    }
+    
+    #descripcion-personal {
+        border-width: 1rem;
+        font-size: 2rem;
+    }
+
+    /* ------ ------ ------ MENU PRINCIPAL ------ ------ ------ */
+
+    #boton-home {
+        display: none;
+    }
+    
+    #menu-principal {
+        position: sticky;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        max-width: 1200px;
+        min-height: 100px;
+        height: 100px;
+        clip-path: none;
+        box-shadow: 0px 3px 10px 5px var(--color-sombra);
+    }
+    
+    #menu-principal #switcher {
+        width: 10%;
+        margin: 0 5%;
+    }
+    
+    #switcher #boton-switcher {
+        width: 60px;
+        height: 60px;
+    }
+
+    #menu-principal #botones-menu {
+        width: 80%;
+        height: 60px;
+        flex-direction: row;
+    }
+    
+    #menu-principal li {
+        width: 25%;
+        height: 60px;
+    }
+
+    #menu-principal .boton-menu-principal {
+        width: 100%;
+        border-radius: 0px;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    /* ------ ------ ------ HABILIDADES ------ ------ ------ */
+    #seccion-habilidades {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #seccion-habilidades #menu-habilidades {
+        margin: 100px auto;
+    }
+    
+    .boton-habilidades {
+        padding: 20px 0px;
+        border: 7px solid;
+        font-size: 2rem;
+        border-image: linear-gradient(
+            0deg, 
+            var(--fondo-menu) -10%,
+            var(--color-boton-oscuro), 
+            var(--fondo-menu)) 1;
+    }
+
+    .contenido-habilidades {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        display: none;
+    }
+
+    /* ------ ------ ------ PROYECTOS ------ ------ ------ */
+    
+    #seccion-proyectos #proyectos-realizados {
+        max-width: 1000px;
+        height: fit-content;
+        margin: 100px auto;
+    }
+    
+    #proyectos-realizados #proyectos-web {
+        display: grid;
+        justify-items: center;
+        row-gap: 75px;
+        grid-template-columns: 1fr 1fr;
+        height: fit-content;
+        margin: 10px auto;
+        width: 100%;
+        max-width: 1000px;
+        margin: 0px auto;
+    }
+    
+    #proyectos-realizados i {
+        display: none;
+    }
+    
+    #proyectos-web .tarjeta-proyecto {
+        position: relative;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        width: 200px;
+        height: 200px;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    
+    .nombre-proyecto {
+        position: absolute;
+        top: -200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 0px 0px;
+        font-size: 1.4rem;
+        font-weight: bolder;
+        transition: .5s ease top;
+    }
+
+    .tarjeta-proyecto:hover .nombre-proyecto {
+        top: 0;
+    }
+
+    /* ------ ------ ------ CONTACTO ------ ------ ------ */
+    
+    #seccion-contacto #formulario-contacto {
+        margin: 70px auto;
+    }
+    
+    #formulario-contacto p {
+        font-size: 1.5rem;
+    }
+    
+    #formulario-contacto input {
+        padding: 10px;
+        font-weight: bold;
+    }
+    
+    #formulario-contacto textarea {
+        width: 70%;
+        height: 200px;
+        padding: 20px;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    
+    #formulario-contacto #contador {
+        width: 70%;
+    }
+    
+    #formulario-contacto #botones-contacto {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 20px 0px;
+    }
+    
+    #botones-contacto button {
+        width: 200px;
+        padding: 20px;
+        border-radius: 50px;
+        font-weight: bolder;
+        font-size: 1.5rem;
+    }
+    
+    #seccion-contacto #mensaje-enviado {
+        display: flex;
+        border: 20px double var(--fondo-principal-oscuro);
+        margin: 70px 0px;
+        display: none;
+    }
+    
+    #mensaje-enviado p {
+        font-size: 1.5rem;
+    }
+    
+    #mensaje-enviado i {
+        font-size: 6rem;
+    }
+    
+    /* ------ ------ ------ FOOTER ------ ------ ------ */
+    
+    footer h2 {
+        font-size: 3rem;
+    }
+    
+    #redes i {
+        font-size: 8rem;
+    }
+    
+    footer #prestamo {
+        font-size: 1rem;
+    }
+    
+    footer p {
+        margin-top: 15px;
+        margin-bottom: 5px;
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (max-height: 400px) and (max-width: 800px) {
+
+    #menu-principal #switcher {
+        margin-top: 20px;
+    }
+
+    #menu-principal #botones-menu {
+        height: 50%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 20px;
+    }
+
+    #menu-principal .boton-menu-principal {
+        margin: 0 auto;
+    }
+}
