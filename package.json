@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack serve --mode development --open --port 8000",
+    "start": "webpack serve --mode development --open --hot --port 8000",
     "build": "webpack --mode production"
   },
   "repository": {
