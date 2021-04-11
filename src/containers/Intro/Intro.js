@@ -1,19 +1,23 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import Presentation from '../../components/Presentation/Presentation';
 import PersonalData from '../../components/PersonalData/PersonalData';
+
+import './Intro.css';
 
 const Intro = () => {
   return (
-    <div className="container-fluid border border-danger">
-      <div className="row">
-        <div className="col-sm-5 border border-primary">
-          <PersonalData />
-        </div>
-        <div className="col-sm-7 border border-primary">
-          PRESENTACION
-        </div>
-      </div>
+    <div
+     id="intro-container"
+     className="
+      container-fluid
+      d-flex flex-column
+      justify-content-evenly
+      just border border-danger"
+    >
+      <Presentation />
+      <PersonalData />
     </div>
   );
 }

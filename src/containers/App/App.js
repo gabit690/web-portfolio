@@ -1,15 +1,14 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
 import Intro from '../Intro/Intro';
-
 
 import './App.css'
 
 const App = () => {
   return (
-    <Fragment>
+    <div id="app-container">
       <Intro />
-    </Fragment>
+    </div>
   );
 }
 

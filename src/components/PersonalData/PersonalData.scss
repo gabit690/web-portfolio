@@ -1,18 +1,30 @@
-#profile-photo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 150px;
-  height: 150px;
-  margin: 30px auto;
-  background-color: orange;
-  border: 5px dotted black;
+#profile {
+
+  &-role, &-address {
+    text-transform: capitalize;
+    text-align: center;
+  }
+
+  &-role {
+    font-size: 2rem;
+  }
+
+  &-address {
+    font-size: 1.3rem;
+  }
+  
 }
 
-#profile-role {
-  text-align: center;
-}
-
-#profile-address {
-  text-align: center;
+@media screen and (min-width: 700px) {
+  #profile {
+ 
+    &-role {
+      font-size: 3rem;
+    }
+  
+    &-address {
+      font-size: 2rem;
+    }
+    
+  }
 }

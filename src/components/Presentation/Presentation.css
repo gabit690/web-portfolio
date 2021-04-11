@@ -1,0 +1,39 @@
+#profile-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 240px;
+  margin: 30px auto;
+  background-color: orange;
+  border-radius: 50%;
+}
+#profile-name {
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 2.3rem;
+  font-weight: bolder;
+}
+
+#photo-container i {
+  display: none;
+  color: white;
+  font-size: 5rem;
+}
+
+@media screen and (min-width: 700px) {
+  #profile-photo {
+    width: 340px;
+    height: 340px;
+    background-color: blue;
+  }
+  #profile-name {
+    font-size: 4rem;
+  }
+
+  #photo-container i {
+    font-size: 10rem;
+  }
+}
+
+/*# sourceMappingURL=Presentation.css.map */

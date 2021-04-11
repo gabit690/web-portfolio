@@ -1,20 +1,21 @@
-#profile-photo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 150px;
-  height: 150px;
-  margin: 30px auto;
-  background-color: orange;
-  border: 5px dotted black;
+#profile-role, #profile-address {
+  text-transform: capitalize;
+  text-align: center;
 }
-
 #profile-role {
-  text-align: center;
+  font-size: 2rem;
+}
+#profile-address {
+  font-size: 1.3rem;
 }
 
-#profile-address {
-  text-align: center;
+@media screen and (min-width: 700px) {
+  #profile-role {
+    font-size: 3rem;
+  }
+  #profile-address {
+    font-size: 2rem;
+  }
 }
 
 /*# sourceMappingURL=PersonalData.css.map */

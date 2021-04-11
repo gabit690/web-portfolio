@@ -1,3 +1,17 @@
-body {
-  background-color: darkgrey;
+#app-container {
+  margin: auto;
+  width: 100vw;
+  min-width: 320px;
+  max-width: 1400px;
+}
+
+/* Fonts to headlines and textual content */
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap');
+
+.headline {
+  font-family: 'Roboto', Verdana, sans-serif;
+}
+
+.text-content {
+  font-family: 'Lato', Verdana, sans-serif;
 }
