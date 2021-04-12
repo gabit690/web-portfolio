@@ -1,0 +1,19 @@
+.accordion-button {
+  background-color: #c5b3e6 !important;
+  color: #8c68cd !important;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+.accordion-button::after {
+  margin-left: 20px;
+}
+.accordion-button:focus {
+  background-color: #6f42c1 !important;
+  color: white !important;
+  outline: 5px solid #a98eda !important;
+}
+.accordion-body {
+  background-color: #e2d9f3;
+}
+
+/*# sourceMappingURL=SkillGroup.css.map */
