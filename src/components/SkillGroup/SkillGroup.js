@@ -41,14 +41,21 @@ const languageSkills = [
   }
 ];
 
-const frameworkSkills = [
-  {
-    title: 'Bootstrap',
-    level: 'advanced'
-  },
+const librarySkills = [
   {
     title: 'ReactJS',
     level: 'pro'
+  },
+  {
+    title: 'JQuery',
+    level: 'advanced'
+  }
+];
+
+const toolkitkSkills = [
+  {
+    title: 'Bootstrap',
+    level: 'advanced'
   },
   {
     title: 'Redux',
@@ -57,12 +64,13 @@ const frameworkSkills = [
   {
     title: 'Sass',
     level: 'advanced'
-  }
-];
-
-const librarySkills = [
+  },
   {
-    title: 'JQuery',
+    title: 'Git',
+    level: 'intermediate'
+  },
+  {
+    title: 'MySql',
     level: 'advanced'
   }
 ];
@@ -83,10 +91,10 @@ const dataGroups = [
     })
   },
   {
-    idHeading: 'framework-skills',
-    idCollapse: 'framework-collapse',
-    title: 'Frameworks',
-    bodyContent: frameworkSkills.map((data, index) => {
+    idHeading: 'library-skills',
+    idCollapse: 'library-collapse',
+    title: 'Libraries',
+    bodyContent: librarySkills.map((data, index) => {
       return (
         <SkillField
          name={data.title}
@@ -97,10 +105,10 @@ const dataGroups = [
     })
   },
   {
-    idHeading: 'library-skills',
-    idCollapse: 'library-collapse',
-    title: 'Libraries',
-    bodyContent: librarySkills.map((data, index) => {
+    idHeading: 'toolkitk-skills',
+    idCollapse: 'toolkitk-collapse',
+    title: 'Toolkits',
+    bodyContent: toolkitkSkills.map((data, index) => {
       return (
         <SkillField
          name={data.title}

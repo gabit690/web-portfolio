@@ -1,9 +1,12 @@
+.accordion-item {
+  border: none !important;
+}
 .accordion-button {
-  background-color: #c5b3e6 !important;
-  color: #8c68cd !important;
+  background-color: #fd7e14;
+  color: #ffe69c;
+  border: 5px solid #ffcd39;
   justify-content: center;
   font-size: 1.5rem;
-  box-shadow: 0px 5px 10px 1px black !important;
 }
 .accordion-button::after {
   display: none;
@@ -15,13 +18,29 @@
 .accordion-button[aria-expanded=true] .bi-chevron-down {
   transform: translateY(2px) rotate(180deg);
 }
-.accordion-button:focus, .accordion-button[aria-expanded=true] {
-  background-color: #6f42c1 !important;
+.accordion-button:hover {
+  background-color: #ca6510 !important;
+  border-color: #cc9a06 !important;
   color: white !important;
-  outline: 5px solid #a98eda !important;
+}
+.accordion-button:focus {
+  border-color: #ffcd39;
+  box-shadow: none;
+}
+.accordion-button[aria-expanded=true] {
+  background-color: #ffe69c;
+  color: #fd7e14;
+  border-color: #fd7e14 !important;
+  box-shadow: 0px 5px 10px 0px #984c0c;
 }
 .accordion-body {
-  background-color: #e2d9f3;
+  background-color: #adb5bd;
+  border: 5px solid #495057;
+  border-top: none;
+  border-bottom: none;
+}
+.accordion-item:nth-child(3) .accordion-body {
+  border-bottom: 5px solid #495057;
 }
 
 @media screen and (min-width: 768px) {

@@ -6,7 +6,7 @@ import SkillGroup from '../../components/SkillGroup/SkillGroup';
 const Skills = () => {
   return (
     <div id="skills-container" className="container-fluid border px-0">
-      <Header content="habilidades" />
+      <Header content="Skills" />
       <SkillGroup />
     </div>
   );
