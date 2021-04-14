@@ -8,12 +8,22 @@
     color: $purple-400 !important;
     justify-content: center;
     font-size: 1.5rem;
+    box-shadow: 0px 5px 10px 1px black !important;
 
     &::after {
-      margin-left: 20px;
+      display: none;
     }
 
-    &:focus {
+    & .bi-chevron-down {
+      margin-left: 20px;
+      transform: translateY(2px);
+    }
+
+    &[aria-expanded=true] .bi-chevron-down {
+      transform: translateY(2px) rotate(180deg);
+    }
+
+    &:focus, &[aria-expanded=true] {
       background-color: $purple-500 !important;
       color: white !important;
       outline: 5px solid $purple-300 !important;
@@ -27,3 +37,8 @@
 
 }
 
+@media screen and (min-width: 768px) {
+  .accordion {
+    max-width: 900px;
+  }
+}

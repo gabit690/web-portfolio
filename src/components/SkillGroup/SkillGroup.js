@@ -6,50 +6,64 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 
 import SkillField from '../SkillField/SkillField';
 
+import logos from '../../assets/logos';
+
 import './SkillGroup.css';
 
 const languageSkills = [
   {
-    icon: <i class="bi bi-award"></i>,
-    level: 'beginner'
+    title: 'Css3',
+    level: 'advanced'
   },
   {
-    icon: <i class="bi bi-badge-3d-fill"></i>,
+    title: 'Html5',
+    level: 'pro'
+  },
+  {
+    title: 'Javascript',
     level: 'intermediate'
   },
   {
-    icon: <i class="bi bi-badge-4k-fill"></i>,
-    level: 'advance'
+    title: 'Php',
+    level: 'advanced'
+  },
+  {
+    title: 'Sql',
+    level: 'pro'
+  },
+  {
+    title: 'Python',
+    level: 'intermediate'
+  },
+  {
+    title: 'Java',
+    level: 'advanced'
   }
 ];
 
 const frameworkSkills = [
   {
-    icon: <i class="bi bi-award"></i>,
-    level: 'beginner'
+    title: 'Bootstrap',
+    level: 'advanced'
   },
   {
-    icon: <i class="bi bi-badge-3d-fill"></i>,
+    title: 'ReactJS',
+    level: 'pro'
+  },
+  {
+    title: 'Redux',
     level: 'intermediate'
   },
   {
-    icon: <i class="bi bi-badge-4k-fill"></i>,
-    level: 'advance'
+    title: 'Sass',
+    level: 'advanced'
   }
 ];
 
 const librarySkills = [
   {
-    icon: <i class="bi bi-award"></i>,
-    level: 'beginner'
-  },
-  {
-    icon: <i class="bi bi-badge-3d-fill"></i>,
-    level: 'intermediate'
-  },
-  {
-    icon: <i class="bi bi-badge-4k-fill"></i>,
-    level: 'advance'
+    title: 'JQuery',
+    level: 'advanced'
   }
 ];
 
@@ -59,7 +73,13 @@ const dataGroups = [
     idCollapse: 'language-collapse',
     title: 'Languages',
     bodyContent: languageSkills.map((data, index) => {
-      return <SkillField icon={data.icon} level={data.level} key={index} />;
+      return (
+        <SkillField
+         name={data.title}
+         logo={logos[data.title]}
+         level={data.level}
+         key={index} 
+        />);
     })
   },
   {
@@ -67,7 +87,13 @@ const dataGroups = [
     idCollapse: 'framework-collapse',
     title: 'Frameworks',
     bodyContent: frameworkSkills.map((data, index) => {
-      return <SkillField icon={data.icon} level={data.level} key={index} />;
+      return (
+        <SkillField
+         name={data.title}
+         logo={logos[data.title]}
+         level={data.level}
+         key={index} 
+        />);
     })
   },
   {
@@ -75,7 +101,13 @@ const dataGroups = [
     idCollapse: 'library-collapse',
     title: 'Libraries',
     bodyContent: librarySkills.map((data, index) => {
-      return <SkillField icon={data.icon} level={data.level} key={index} />;
+      return (
+        <SkillField
+         name={data.title}
+         logo={logos[data.title]}
+         level={data.level}
+         key={index} 
+        />);
     })
   }
 ];
@@ -92,7 +124,7 @@ const groupsItems = dataGroups.map((data, index) => {
          aria-expanded="false"
          aria-controls={data.idCollapse}
         >
-          {data.title}
+          {data.title} <i class="bi bi-chevron-down"></i>
         </button>
       </h2>
       <div
@@ -111,7 +143,7 @@ const groupsItems = dataGroups.map((data, index) => {
 
 const SkillGroup = ({title}) => {
   return (
-    <div className="accordion accordion-flush container-fluid my-5 w-75 px-0" id="accordion-container">
+    <div className="accordion accordion-flush container-fluid my-5 w-75 px-0 shadow-lg" id="accordion-container">
       {groupsItems}
     </div>
   );

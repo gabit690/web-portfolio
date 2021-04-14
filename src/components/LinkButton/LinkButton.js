@@ -16,7 +16,7 @@ const LinkButton = ({id, icon, url}) => {
      id={id}
      title={id}
      onClick={handleClick}
-     className="social-link btn btn-secondary"
+     className="social-link btn btn-secondary shadow-lg"
     >
       <i className={icon}></i>
     </button>
