@@ -1,0 +1,22 @@
+#contact-form {
+  background-color: #ced4da;
+  padding: 0 20px;
+  margin: auto;
+  width: 90%;
+  max-width: 768px;
+}
+
+#letters-counter {
+  position: absolute;
+  right: 0;
+}
+
+.form-floating > .form-control:focus ~ label, .form-floating > .form-control:not(:placeholder-shown) ~ label {
+  color: #0a58ca;
+}
+.form-floating textarea {
+  height: 130px !important;
+  resize: none;
+}
+
+/*# sourceMappingURL=Message.css.map */

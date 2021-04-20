@@ -12,7 +12,7 @@ const PersonalData = () => {
        id="profile-role"
        className="headline text-light"
       >
-        <i class="bi bi-briefcase-fill text-white"></i> programador
+        <i class="bi bi-briefcase-fill text-white"></i> developer
       </p>
       <p
        id="profile-address"

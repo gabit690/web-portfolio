@@ -1,0 +1,29 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+
+#contact-form {
+  background-color: $gray-400;
+  padding: 0 20px;
+  margin: auto;
+  width: 90%;
+  max-width: 768px;
+}
+
+#letters-counter {
+  position: absolute;
+  right: 0;
+}
+
+.form {
+
+  &-floating>&-control {
+    &:focus~label, &:not(:placeholder-shown)~label {
+      color: $blue-600;
+    }
+  }
+
+  &-floating textarea {
+    height: 130px !important;
+    resize: none;
+  }
+}
