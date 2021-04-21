@@ -14,7 +14,7 @@ const Intro = () => {
       container-fluid
       d-flex flex-column
       justify-content-evenly
-      just border border-danger"
+      "
     >
       <Presentation />
       <PersonalData />

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import 'bootstrap-icons/font/bootstrap-icons.css';
 
 import Header from '../../components/Header/Header';
 
@@ -89,7 +88,7 @@ const Message = () => {
   }
 
   return (
-    <div className="container-fluid px-0 pb-5">
+    <div className="container-fluid px-0 pb-5 border">
       <Header content="Message" />
       <div className="container-fluid rounded mt-5 px-0">
         <form id="contact-form" onSubmit={handleSubmit}>

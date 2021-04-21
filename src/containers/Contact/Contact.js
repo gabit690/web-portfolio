@@ -17,7 +17,7 @@ const Contact = () => {
         py-3
         "
       >
-        Encontrame en:
+        Find me in:
       </h2>
       <ul 
        id="social-links-container"
@@ -32,7 +32,7 @@ const Contact = () => {
         <LinkButton id="linkedin" icon="bi bi-linkedin" url="https://linkedin.com/in/jg-valeriano" />
       </ul>
       <Copyright
-       content="Desarrollado por Gabit"
+       content="Developed by Gabit"
        year={(new Date()).getFullYear()} 
       />
     </div>
