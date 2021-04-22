@@ -92,7 +92,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="container-fluid px-0 pb-5 border">
+    <div id="projects-container" className="container-fluid px-0 pb-5 border">
       <Header content="Projects"/>
       <div className="container-fluid px-0 mt-5">
         <div id="thumbnailsCarousel" className="carousel slide" data-bs-interval="false">

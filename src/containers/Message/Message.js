@@ -88,7 +88,7 @@ const Message = () => {
   }
 
   return (
-    <div className="container-fluid px-0 pb-5 border">
+    <div id="message-container" className="container-fluid px-0 pb-5 border">
       <Header content="Message" />
       <div className="container-fluid rounded mt-5 px-0">
         <form id="contact-form" onSubmit={handleSubmit}>
