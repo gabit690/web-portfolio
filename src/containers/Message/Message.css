@@ -14,9 +14,9 @@
 .form-floating > .form-control:focus ~ label, .form-floating > .form-control:not(:placeholder-shown) ~ label {
   color: #0a58ca;
 }
+
 .form-floating textarea {
   height: 130px !important;
   resize: none;
 }
-
 /*# sourceMappingURL=Message.css.map */

@@ -1,1 +1,11 @@
-{"version":3,"sourceRoot":"","sources":["Message.scss","../../../node_modules/bootstrap/scss/_variables.scss"],"names":[],"mappings":"AAGA;EACE,kBCQS;EDPT;EACA;EACA;EACA;;;AAGF;EACE;EACA;;;AAME;EACE,OCsFK;;ADlFT;EACE;EACA","file":"Message.css"}
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,aAAa,CAAC;EACZ,gBAAgB,EEQP,OAAO;EFPhB,OAAO,EAAE,MAAM;EACf,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,GAAG;EACV,SAAS,EAAE,KAAK;CACjB;;AAED,AAAA,gBAAgB,CAAC;EACf,QAAQ,EAAE,QAAQ;EAClB,KAAK,EAAE,CAAC;CACT;;AAIE,AACC,cADQ,GAAE,aAAQ,AACjB,MAAM,GAAC,KAAK,EADd,cAAS,GAAE,aAAQ,AACF,IAAK,CAAA,kBAAkB,IAAE,KAAK,CAAC;EAC7C,KAAK,EC4ID,OAA2B;CD3IhC;;AAGF,AAAD,cAAU,CAAC,QAAQ,CAAC;EAClB,MAAM,EAAE,gBAAgB;EACxB,MAAM,EAAE,IAAI;CACb",
+    "sources": [
+        "Message.scss",
+        "../../../node_modules/bootstrap/scss/_functions.scss",
+        "../../../node_modules/bootstrap/scss/_variables.scss"
+    ],
+    "names": [],
+    "file": "Message.css"
+}

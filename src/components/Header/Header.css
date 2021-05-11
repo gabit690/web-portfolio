@@ -3,7 +3,7 @@
   text-transform: capitalize;
   outline: 5px solid #c5b3e6;
   background-color: #432874;
-  box-shadow: 0px 10px 5px 2px #2c1a4d;
+  -webkit-box-shadow: 0px 10px 5px 2px #2c1a4d;
+          box-shadow: 0px 10px 5px 2px #2c1a4d;
 }
-
 /*# sourceMappingURL=Header.css.map */

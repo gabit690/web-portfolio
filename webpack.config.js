@@ -6,6 +6,8 @@ const htmlPluginConfig = new HtmlWebpackPlugin({
   filename: './index.html'
 });
 
+const CopyPlugin = require("copy-webpack-plugin");
+
 //Exporto la configuración de Webpack.
 module.exports = {
   module: {
@@ -46,5 +48,15 @@ module.exports = {
       }
     ]
   },
-  plugins: [htmlPluginConfig]
+  plugins: [
+    htmlPluginConfig,
+    new CopyPlugin({
+      patterns: [
+        {
+          from: "src/backend",
+          to: "backend"
+        }
+      ]
+    })
+  ]
 };

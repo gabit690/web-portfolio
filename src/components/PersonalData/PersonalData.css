@@ -2,9 +2,11 @@
   text-transform: capitalize;
   text-align: center;
 }
+
 #profile-role {
   font-size: 2rem;
 }
+
 #profile-address {
   font-size: 1.3rem;
 }
@@ -17,5 +19,4 @@
     font-size: 2rem;
   }
 }
-
 /*# sourceMappingURL=PersonalData.css.map */
