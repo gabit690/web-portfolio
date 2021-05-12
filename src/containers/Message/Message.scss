@@ -1,6 +1,31 @@
 @import "../../../node_modules/bootstrap/scss/functions";
 @import "../../../node_modules/bootstrap/scss/variables";
 
+#loading-message-container {
+  height: 500px;
+}
+
+.message-container {
+  width: 80%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.envelope {
+  display: block;
+  width: 250px;
+  height: 250px;
+  margin: 50px 0px;
+}
+
 #contact-form {
   background-color: $gray-400;
   padding: 0 20px;

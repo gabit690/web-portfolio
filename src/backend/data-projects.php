@@ -15,8 +15,8 @@
         'id' => intval($row["Id"]),
         'title' =>  $row["Title"],
         'description' => $row["Description"],
-        'image' => "/web-portfolio/dist/backend/thumbnails/" . $row["Image"],
-        'link' => $row["Link"]
+        'image' => "/web-portfolio/dist/backend/thumbnails/" . $row["Thumbnail"],
+        'url' => $row["Url"]
       );
 
       array_push($projects, $project);
