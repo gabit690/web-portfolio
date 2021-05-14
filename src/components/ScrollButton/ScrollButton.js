@@ -1,5 +1,4 @@
 import React from 'react';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap-icons/font/bootstrap-icons.css';
@@ -9,14 +8,13 @@ import './ScrollButton.css';
 
 const ScrollButton = () => {
 
-  $(window).scroll(function() {
+  $(window).on("scroll", function() {
     if ($(window).scrollTop() > 0 ) {
       $('#scroller').fadeIn(400);
     } else {
       $('#scroller').fadeOut(400);
     }
   });
-
 
   function handleClick() {
     $('body, html').animate({
@@ -36,7 +34,7 @@ const ScrollButton = () => {
      "
      onClick={handleClick}
     >
-      <i class="bi bi-arrow-up"></i>
+      <i className="bi bi-arrow-up"></i>
     </button>
   );
 };

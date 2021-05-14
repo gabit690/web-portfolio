@@ -55,6 +55,10 @@ module.exports = {
         {
           from: "src/backend",
           to: "backend"
+        },
+        {
+          from: "src/assets/img/portfolio-icon.ico",
+          to: "img"
         }
       ]
     })

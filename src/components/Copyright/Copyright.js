@@ -9,7 +9,8 @@ const Copyright = ({content, year}) => {
        text-light
        text-center
        pb-3
-       my-0"
+       my-0
+      "
       >
         {content + '. ' + year}
       </p>

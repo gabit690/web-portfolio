@@ -1,8 +1,15 @@
 @import "../../../node_modules/bootstrap/scss/functions";
 @import "../../../node_modules/bootstrap/scss/variables";
 
+#accordion-container {
+  margin: 100px auto;
+}
+
 .accordion {
-  // background-color: $yellow-400;
+
+  &-collapse {
+    transition: all 0.5s linear !important;
+  }
 
   &-item {
     border: none !important;

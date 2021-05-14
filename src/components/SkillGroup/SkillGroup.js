@@ -1,11 +1,9 @@
 import React from 'react';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 import SkillField from '../SkillField/SkillField';
-
 import logos from '../../assets/logos';
 
 import './SkillGroup.css';
@@ -17,53 +15,53 @@ const languageSkills = [
   },
   {
     title: 'Html5',
-    level: 'pro'
+    level: 'advanced'
   },
   {
     title: 'Javascript',
-    level: 'intermediate'
+    level: 'advanced'
   },
   {
     title: 'Php',
-    level: 'advanced'
+    level: 'beginner'
   },
   {
     title: 'Sql',
-    level: 'pro'
+    level: 'beginner'
   },
   {
     title: 'Python',
-    level: 'intermediate'
+    level: 'beginner'
   },
   {
     title: 'Java',
-    level: 'advanced'
+    level: 'intermediate'
   }
 ];
 
 const librarySkills = [
   {
     title: 'ReactJS',
-    level: 'pro'
+    level: 'intermediate'
   },
   {
     title: 'JQuery',
-    level: 'advanced'
+    level: 'intermediate'
   }
 ];
 
 const toolkitkSkills = [
   {
     title: 'Bootstrap',
-    level: 'advanced'
-  },
-  {
-    title: 'Redux',
     level: 'intermediate'
   },
   {
+    title: 'Redux',
+    level: 'beginner'
+  },
+  {
     title: 'Sass',
-    level: 'advanced'
+    level: 'beginner'
   },
   {
     title: 'Git',
@@ -71,7 +69,7 @@ const toolkitkSkills = [
   },
   {
     title: 'MySql',
-    level: 'advanced'
+    level: 'beginner'
   }
 ];
 
@@ -139,7 +137,6 @@ const groupsItems = dataGroups.map((data, index) => {
        id={data.idCollapse}
        className="accordion-collapse collapse"
        aria-labelledby={data.idHeading}
-       data-bs-parent="#accordion-container"
       >
         <div className="accordion-body">
           {data.bodyContent}
@@ -151,7 +148,10 @@ const groupsItems = dataGroups.map((data, index) => {
 
 const SkillGroup = ({title}) => {
   return (
-    <div className="accordion accordion-flush container-fluid my-5 w-75 px-0 shadow-lg" id="accordion-container">
+    <div 
+     className="accordion accordion-flush container-fluid w-75 px-0 shadow-lg"
+     id="accordion-container"
+    >
       {groupsItems}
     </div>
   );

@@ -50,5 +50,23 @@
   &-floating textarea {
     height: 130px !important;
     resize: none;
+
+    & ~ label {
+      z-index: 2;
+    }
   }
+
+  &-floating textarea:not(:placeholder-shown) ~ label ~ div {
+    width: calc(100% - 2rem);
+    height: 2rem;
+    background-color: white;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    z-index: 1;
+    padding-top: 1.625rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
 }

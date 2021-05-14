@@ -1,5 +1,4 @@
 import React from 'react';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
@@ -12,13 +11,13 @@ const PersonalData = () => {
        id="profile-role"
        className="headline text-light"
       >
-        <i class="bi bi-briefcase-fill text-white"></i> developer
+        <i className="bi bi-briefcase-fill text-white"></i> developer
       </p>
       <p
        id="profile-address"
        className="headline text-light"
       >
-        <i class="bi bi-geo-alt-fill text-danger"></i> flores, capital Federal
+        <i className="bi bi-geo-alt-fill text-danger"></i> flores, capital Federal
       </p>
     </div>
   );

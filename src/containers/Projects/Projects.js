@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import axios from 'axios';
 
 import Header from '../../components/Header/Header';
 
 import './Projects.css';
-
-import axios from 'axios';
 
 class Projects extends Component {
 
@@ -20,7 +18,6 @@ class Projects extends Component {
   }
 
   componentDidMount() {
-
     axios({
       method: 'GET',
       url: '/web-portfolio/dist/backend/data-projects.php'
@@ -32,7 +29,6 @@ class Projects extends Component {
           });
       })
       .catch(error => console.log(error));
-
   };
 
   render() {
@@ -69,7 +65,11 @@ class Projects extends Component {
 
       activeContent = (
         <div className="container-fluid px-0 mt-5">
-          <div id="thumbnailsCarousel" className="carousel slide" data-bs-interval="false">
+          <div 
+           id="thumbnailsCarousel" 
+           className="carousel slide" 
+           data-bs-interval="false"
+          >
             <div className="carousel-indicators mb-0">
               {buttonsIndicatiors}
             </div>
@@ -77,22 +77,46 @@ class Projects extends Component {
               {
                 this.state.projects.map((project, index) => {
                   return (
-                    <div className={"carousel-item" + ((index == 0) ? " active":"")} key={index}>
+                    <div 
+                     className={"carousel-item" + ((index == 0) ? " active":"")}
+                     key={index}
+                    >
                       <a href={project.url} target="_blank">
-                        <img src={project.image} class="thumbnail d-block w-100" alt={project.description}/>
+                        <img 
+                         src={project.image} 
+                         className="thumbnail d-block w-100" 
+                         alt={project.description}
+                        />
                       </a>
                     </div>
                   );
                 })
               }
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#thumbnailsCarousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
+            <button 
+             className="carousel-control-prev" 
+             type="button" 
+             data-bs-target="#thumbnailsCarousel" 
+             data-bs-slide="prev"
+            >
+              <span 
+               className="carousel-control-prev-icon"
+               aria-hidden="true">
+              </span>
+              <span className="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#thumbnailsCarousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
+            <button 
+             className="carousel-control-next" 
+             type="button" 
+             data-bs-target="#thumbnailsCarousel" 
+             data-bs-slide="next"
+            >
+              <span 
+               className="carousel-control-next-icon" 
+               aria-hidden="true"
+              >
+              </span>
+              <span className="visually-hidden">Next</span>
             </button>
           </div>
         </div>

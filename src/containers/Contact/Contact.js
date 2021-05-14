@@ -1,8 +1,6 @@
 import React from 'react';
-
 import LinkButton from '../../components/LinkButton/LinkButton';
 import Copyright from '../../components/Copyright/Copyright';
-
 import './Contact.css';
 
 const Contact = () => {
@@ -15,7 +13,7 @@ const Contact = () => {
         fs-1
         fw-bolder
         py-3
-        "
+       "
       >
         Find me in:
       </h2>
@@ -26,10 +24,18 @@ const Contact = () => {
         px-0
         d-flex
         justify-content-evenly
-        "
+       "
       >
-        <LinkButton id="github" icon="bi bi-github" url="https://github.com/gabit690" />
-        <LinkButton id="linkedin" icon="bi bi-linkedin" url="https://linkedin.com/in/jg-valeriano" />
+        <LinkButton 
+         id="github" 
+         icon="bi bi-github" 
+         url="https://github.com/gabit690"
+        />
+        <LinkButton 
+         id="linkedin" 
+         icon="bi bi-linkedin" 
+         url="https://linkedin.com/in/jg-valeriano"
+        />
       </ul>
       <Copyright
        content="Developed by Gabit"

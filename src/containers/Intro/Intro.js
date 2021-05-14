@@ -1,9 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import Presentation from '../../components/Presentation/Presentation';
 import PersonalData from '../../components/PersonalData/PersonalData';
-
 import './Intro.css';
 
 const Intro = () => {
@@ -14,10 +12,10 @@ const Intro = () => {
       container-fluid
       d-flex flex-column
       justify-content-evenly
-      "
+     "
     >
-      <Presentation />
-      <PersonalData />
+      <Presentation/>
+      <PersonalData/>
     </div>
   );
 }
