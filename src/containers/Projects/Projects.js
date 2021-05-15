@@ -5,16 +5,15 @@ import axios from 'axios';
 
 import Header from '../../components/Header/Header';
 
+import { connect } from 'react-redux';
+import { mapStateToProps, mapDispatchToProps } from '../../manageState/Mapping';
+
 import './Projects.css';
 
 class Projects extends Component {
 
-  constructor() {
-    super();
-    this.state = {
-      loading: true,
-      projects: []
-    };
+  constructor(props) {
+    super(props);
   }
 
   componentDidMount() {
@@ -23,10 +22,7 @@ class Projects extends Component {
       url: '/web-portfolio/dist/backend/data-projects.php'
       })
       .then(result => {
-          this.setState({
-            loading: false,
-            projects: result.data
-          });
+        this.props.loadProjects(result.data)
       })
       .catch(error => console.log(error));
   };
@@ -35,9 +31,18 @@ class Projects extends Component {
 
     let activeContent = null;
 
-    if (this.state.loading) {
+    if (this.props.projectsSection.loading) {
       activeContent = (
-        <div className="text-center pt-5">
+        <div 
+         className="
+          min-container 
+          text-center 
+          pt-5
+          d-flex 
+          justify-content-center 
+          align-items-center
+         "
+        >
           <div className="spinner-grow text-secondary" role="status">
             <span className="visually-hidden">Loading...</span>
           </div>
@@ -45,7 +50,7 @@ class Projects extends Component {
       );
     } else {
 
-      let numberOfProjects = this.state.projects.length;
+      let numberOfProjects = this.props.projectsSection.data.length;
       let buttonsIndicatiors = [];
 
       for (let index=0; index < numberOfProjects; index++) {
@@ -75,7 +80,7 @@ class Projects extends Component {
             </div>
             <div class="carousel-inner">
               {
-                this.state.projects.map((project, index) => {
+                this.props.projectsSection.data.map((project, index) => {
                   return (
                     <div 
                      className={"carousel-item" + ((index == 0) ? " active":"")}
@@ -132,4 +137,5 @@ class Projects extends Component {
     );
   }
 }
-export default Projects;
+
+export default connect(mapStateToProps, mapDispatchToProps) (Projects);

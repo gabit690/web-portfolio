@@ -3,7 +3,7 @@
 }
 
 .accordion-collapse {
-  transition: all 0.5s linear !important;
+  transition: all 0.3s linear !important;
 }
 .accordion-item {
   border: none !important;
@@ -41,13 +41,13 @@
   box-shadow: 0px 5px 10px 0px #984c0c;
 }
 .accordion-body {
-  background-color: #adb5bd;
-  border: 5px solid #495057;
+  background-color: #ced4da;
+  border: 5px solid #adb5bd;
   border-top: none;
   border-bottom: none;
 }
 .accordion-item:nth-child(3) .accordion-body {
-  border-bottom: 5px solid #495057;
+  border-bottom: 5px solid #adb5bd;
 }
 
 @media screen and (min-width: 768px) {

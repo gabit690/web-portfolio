@@ -6,6 +6,10 @@
   margin: auto;
 }
 
+.min-container {
+  min-height: 400px;
+}
+
 .thumbnail {
   margin: auto;
   width: 240px !important;
@@ -35,6 +39,7 @@
     width: 240px !important;
     height: 300px;
     transform: translateX(40px);
+    transition: all .2s linear !important;
   }
 
 }

@@ -7,66 +7,57 @@ import Header from '../../components/Header/Header';
 import envelopeAccepted from '../../assets/img/envelope-accepted.png';
 import envelopeRejected from '../../assets/img/envelope-rejected.png';
 
+import { connect } from 'react-redux';
+import { mapStateToProps, mapDispatchToProps } from '../../manageState/Mapping';
+
 import './Message.css';
 
-const Message = () => {
-
-  const [inputName, setInputName] = useState("");
-  const [errorInputName, setErrorInputName] = useState("");
-
-  const [inputEmail, setInputEmail] = useState("");
-  const [errorInputEmail, setErrorInputEmail] = useState("");
-
-  const [inputSubject, setInputSubject] = useState("");
-  const [errorInputSubject, setErrorInputSubject] = useState("");
-
-  const [inputComment, setInputComment] = useState("");
-  const [errorInputComment, setErrorInputComment] = useState("");
-
-  const [lettersCounter, setCounter] = useState(0);
-
-  const [statusForm, setStatusForm] = useState("available");
+const Message = (props) => {
 
   function handleSubmit(event) {
     event.preventDefault();
-
+    console.log(props);
     const emailRegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-    if (inputName == "") {
-      setErrorInputName("This field is empty.");
+    if (props.messageSection.name == "") {
+      props.errorName("This field is empty.");
     }
-    if (inputEmail == "") {
-      setErrorInputEmail("This field is empty.");
-    } else if (!emailRegExp.test(inputEmail)) {
-      setErrorInputEmail("Format email invalid.");
+    if (props.messageSection.email == "") {
+      props.errorEmail("This field is empty.");
+    } else if (!emailRegExp.test(props.messageSection.email)) {
+      props.errorEmail("Format email invalid.");
     }
-    if (inputSubject == "") {
-      setErrorInputSubject("This field is empty.");
+    if (props.messageSection.subject == "") {
+      props.errorSubject("This field is empty.");
     }
-    if (inputComment == "") {
-      setErrorInputComment("This field is empty.");
+    if (props.messageSection.comment == "") {
+      props.errorComment("This field is empty.");
     }
 
-    const emailValid = inputEmail && emailRegExp.test(inputEmail);
-    const formValid = inputName && emailValid && inputSubject && inputComment;
+    const emailValid = props.messageSection.email && 
+                        emailRegExp.test(props.messageSection.email);
+    const formValid = props.messageSection.name && emailValid 
+                      && props.messageSection.subject 
+                      && props.messageSection.comment;
 
     if (formValid) {
-      setStatusForm("sending");
+      props.changeStatus("sending");
+      console.log(props);
       axios({
         method: 'POST',
         url: '/web-portfolio/dist/backend/message.php',
         data: {
-          name: inputName,
-          email: inputEmail,
-          subject: inputSubject,
-          comment: inputComment,
+          name: props.messageSection.name,
+          email: props.messageSection.email,
+          subject: props.messageSection.subject,
+          comment: props.messageSection.comment,
         }
         })
         .then(result => {
             if(result.data == 1) {
-              setStatusForm("accepted");
+              props.changeStatus("accepted");
             } else {
-              setStatusForm("rejected");
+              props.changeStatus("rejected");
             }
         })
         .catch(error => console.log(error));
@@ -74,40 +65,40 @@ const Message = () => {
   }
 
   function handleInputName(event) {
-    setInputName(event.target.value);
-    if (errorInputName !== "") {
-      setErrorInputName(false);
+    props.changeName(event.target.value);
+    if (props.messageSection.errorName !== "") {
+      props.errorName("");
     }
   }
 
   function handleInputEmail(event) {
-    setInputEmail(event.target.value);
-    if (errorInputEmail !== "") {
-      setErrorInputEmail(false);
+    props.changeEmail(event.target.value);
+    if (props.messageSection.errorEmail !== "") {
+      props.errorEmail("");
     }
   }
 
   function handleInputSubject(event) {
-    setInputSubject(event.target.value);
-    if (errorInputSubject !== "") {
-      setErrorInputSubject(false);
+    props.changeSubject(event.target.value);
+    if (props.messageSection.errorSubject !== "") {
+      props.errorSubject("");
     }
   }
 
   function handleInputComment(event) {
-    if (lettersCounter < 200) {
-      setInputComment(event.target.value);
+    if (props.messageSection.counter < 200) {
+      props.changeComment(event.target.value);
     }
-    setCounter(event.target.value.length);
+    props.changeCounter(event.target.value.length);
 
-    if (errorInputComment !== "") {
-      setErrorInputComment(false);
+    if (props.messageSection.errorComment !== "") {
+      props.errorComment("");
     }
   }
 
   let mainContent = "";
 
-  switch(statusForm) {
+  switch(props.messageSection.status) {
     case "sending": 
                     mainContent = (
                       <div 
@@ -151,7 +142,7 @@ const Message = () => {
                         </div>
                         <div className="img-container">
                           <img 
-                           className="envelope" 
+                           className="message-info" 
                            src={envelopeAccepted} 
                            alt="envelope"
                           />
@@ -182,9 +173,9 @@ const Message = () => {
                         </div>
                         <div className="img-container">
                           <img 
-                           className="envelope" 
+                           className="message-info" 
                            src={envelopeRejected} 
-                           alt="envelope"
+                           alt="wrong sign"
                           />
                         </div>
                       </div>
@@ -198,7 +189,7 @@ const Message = () => {
                   <input
                   type="text"
                   className={
-                    `form-control ${errorInputName ? "is-invalid" : ""}`
+                    `form-control ${props.messageSection.errorName ? "is-invalid" : ""}`
                   } 
                   id="name-field" 
                   placeholder="Name"
@@ -208,14 +199,14 @@ const Message = () => {
                     Name<span className="text-danger">*</span>
                   </label>
                   <div className="invalid-feedback">
-                    {errorInputName}
+                    {props.messageSection.errorName}
                   </div>
                 </div>
                 <div className="form-floating mb-3">
                   <input
                   type="email" 
                   className={
-                    `form-control ${errorInputEmail ? "is-invalid" : ""}`
+                    `form-control ${props.messageSection.errorEmail ? "is-invalid" : ""}`
                   } 
                   id="email-field" 
                   placeholder="Email"
@@ -225,14 +216,14 @@ const Message = () => {
                     Email<span className="text-danger">*</span>
                   </label>
                   <div className="invalid-feedback">
-                    {errorInputEmail}
+                    {props.messageSection.errorEmail}
                   </div>
                 </div>
                 <div className="form-floating mb-3">
                   <input
                   type="text" 
                   className={
-                    `form-control ${errorInputSubject ? "is-invalid" : ""}`
+                    `form-control ${props.messageSection.errorSubject ? "is-invalid" : ""}`
                   } 
                   id="subject-field" 
                   placeholder="Subject"
@@ -242,13 +233,13 @@ const Message = () => {
                     Subject<span className="text-danger">*</span>
                   </label>
                   <div className="invalid-feedback">
-                    {errorInputSubject}
+                    {props.messageSection.errorSubject}
                   </div>
                 </div>
                 <div className="form-floating mb-3">
                   <textarea
                   className={
-                    `form-control ${errorInputComment ? "is-invalid" : ""}`
+                    `form-control ${props.messageSection.errorComment ? "is-invalid" : ""}`
                   } 
                   id="comment-field" 
                   placeholder="Leave a comment here"
@@ -264,10 +255,10 @@ const Message = () => {
                    id="letters-counter" 
                    className="my-0"
                   >
-                   {String(lettersCounter) + "/200"}
+                   {String(props.messageSection.counter) + "/200"}
                   </p>
                   <div className="invalid-feedback">
-                    {errorInputComment}
+                    {props.messageSection.errorComment}
                   </div>
                 </div>
                 <div 
@@ -302,4 +293,4 @@ const Message = () => {
   );
 };
 
-export default Message;
+export default connect(mapStateToProps, mapDispatchToProps) (Message);

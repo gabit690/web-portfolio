@@ -19,11 +19,11 @@
   justify-content: center;
 }
 
-.envelope {
+.message-info {
   display: block;
-  width: 250px;
-  height: 250px;
-  margin: 50px 0px;
+  width: 200px;
+  height: 200px;
+  margin: 30px 0px;
 }
 
 #contact-form {
@@ -69,4 +69,12 @@
     padding-right: 0.75rem;
   }
 
+}
+
+@media screen and (min-width: 700px) {
+  .message-info {
+    width: 250px;
+    height: 250px;
+    margin: 50px 0px;
+  }
 }
