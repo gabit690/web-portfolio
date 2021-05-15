@@ -1,0 +1,22 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+
+#intro-container {
+  max-width: 1400px;
+  background-color: $purple-700;
+  height: 100vh;
+  min-height: 500px;
+  max-height: 568px;
+}
+
+@media screen and (min-width: 700px) {
+  #intro-container {
+    height: 100vh;
+    min-height: 700px;
+    max-height: 900px;
+    background-image: url('../../assets/img/logo-light.png');
+    background-repeat: no-repeat;
+    background-size: 85% 85%;
+    background-position: center; 
+  }
+}

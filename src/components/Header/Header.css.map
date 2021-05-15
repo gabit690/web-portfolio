@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,aAAa,CAAC;EACZ,SAAS,EAAE,MAAM;EACjB,cAAc,EAAE,UAAU;EAC1B,OAAO,EAAE,GAAG,CAAC,KAAK,CCqJV,OAA2B;EDpJnC,gBAAgB,ECyJR,OAA2B;EDxJnC,UAAU,EAAE,GAAG,CAAC,IAAI,CAAC,GAAG,CAAC,GAAG,CCwJpB,OAA2B;CDvJpC",
+    "sources": [
+        "Header.scss",
+        "../../../node_modules/bootstrap/scss/_functions.scss",
+        "../../../node_modules/bootstrap/scss/_variables.scss"
+    ],
+    "names": [],
+    "file": "Header.css"
+}

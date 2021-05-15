@@ -1,0 +1,22 @@
+#profile-role, #profile-address {
+  text-transform: capitalize;
+  text-align: center;
+}
+
+#profile-role {
+  font-size: 2rem;
+}
+
+#profile-address {
+  font-size: 1.3rem;
+}
+
+@media screen and (min-width: 700px) {
+  #profile-role {
+    font-size: 3rem;
+  }
+  #profile-address {
+    font-size: 2rem;
+  }
+}
+/*# sourceMappingURL=PersonalData.css.map */

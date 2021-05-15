@@ -1,0 +1,39 @@
+#photo-container #profile-photo {
+  margin: 30px auto;
+}
+#photo-container #profile-photo #author-photo {
+  display: block;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  border: 5px double #c5b3e6;
+}
+#photo-container i {
+  display: none;
+  color: white;
+  font-size: 5rem;
+}
+
+#profile-name {
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 2.3rem;
+  font-weight: bolder;
+}
+
+@media screen and (min-width: 700px) {
+  #photo-container #profile-photo #author-photo {
+    width: 340px;
+    height: 340px;
+    border-width: 10px;
+  }
+  #photo-container i {
+    font-size: 10rem;
+  }
+
+  #profile-name {
+    font-size: 4rem;
+  }
+}
+
+/*# sourceMappingURL=Presentation.css.map */
