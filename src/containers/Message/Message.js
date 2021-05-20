@@ -16,22 +16,21 @@ const Message = (props) => {
 
   function handleSubmit(event) {
     event.preventDefault();
-    console.log(props);
     const emailRegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     if (props.messageSection.name == "") {
-      props.errorName("This field is empty.");
+      props.setErrorName("This field is empty.");
     }
     if (props.messageSection.email == "") {
-      props.errorEmail("This field is empty.");
+      props.setErrorEmail("This field is empty.");
     } else if (!emailRegExp.test(props.messageSection.email)) {
-      props.errorEmail("Format email invalid.");
+      props.setErrorEmail("Format email invalid.");
     }
     if (props.messageSection.subject == "") {
-      props.errorSubject("This field is empty.");
+      props.setErrorSubject("This field is empty.");
     }
     if (props.messageSection.comment == "") {
-      props.errorComment("This field is empty.");
+      props.setErrorComment("This field is empty.");
     }
 
     const emailValid = props.messageSection.email && 
@@ -42,10 +41,19 @@ const Message = (props) => {
 
     if (formValid) {
       props.changeStatus("sending");
-      console.log(props);
+      
+      const environment = "production";
+      let pathDataFolder = "";
+
+      if (environment == "production") {
+        pathDataFolder = "/backend/email/";
+      } else {
+        pathDataFolder = "/web-portfolio/dist/backend/email/";
+      }
+
       axios({
         method: 'POST',
-        url: '/web-portfolio/dist/backend/message.php',
+        url: pathDataFolder + 'message.php',
         data: {
           name: props.messageSection.name,
           email: props.messageSection.email,
@@ -54,7 +62,8 @@ const Message = (props) => {
         }
         })
         .then(result => {
-            if(result.data == 1) {
+          console.log(result.data);
+            if(result.data == "Message has been sent") {
               props.changeStatus("accepted");
             } else {
               props.changeStatus("rejected");
@@ -67,21 +76,21 @@ const Message = (props) => {
   function handleInputName(event) {
     props.changeName(event.target.value);
     if (props.messageSection.errorName !== "") {
-      props.errorName("");
+      props.setErrorName("");
     }
   }
 
   function handleInputEmail(event) {
     props.changeEmail(event.target.value);
     if (props.messageSection.errorEmail !== "") {
-      props.errorEmail("");
+      props.setErrorEmail("");
     }
   }
 
   function handleInputSubject(event) {
     props.changeSubject(event.target.value);
     if (props.messageSection.errorSubject !== "") {
-      props.errorSubject("");
+      props.setErrorSubject("");
     }
   }
 
@@ -92,7 +101,7 @@ const Message = (props) => {
     props.changeCounter(event.target.value.length);
 
     if (props.messageSection.errorComment !== "") {
-      props.errorComment("");
+      props.setErrorComment("");
     }
   }
 

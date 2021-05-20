@@ -17,12 +17,21 @@ class Projects extends Component {
   }
 
   componentDidMount() {
+
+    const environment = "production";
+    let pathDataFolder = "";
+    if (environment == "production") {
+      pathDataFolder = "/backend/";
+    } else {
+      pathDataFolder = "/web-portfolio/dist/backend/";
+    }
+
     axios({
       method: 'GET',
-      url: '/web-portfolio/dist/backend/data-projects.php'
+      url: pathDataFolder + 'data-projects.php'
       })
       .then(result => {
-        this.props.loadProjects(result.data)
+        this.props.loadProjects(result.data);
       })
       .catch(error => console.log(error));
   };

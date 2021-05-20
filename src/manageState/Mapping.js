@@ -1,4 +1,4 @@
-import { loadProjects, changeName, errorName, changeEmail, errorEmail, changeSubject, errorSubject, changeComment, errorComment,
+import { loadProjects, changeName, setErrorName, changeEmail, setErrorEmail, changeSubject, setErrorSubject, changeComment, setErrorComment,
  changeCounter, changeStatus } from './Creators.js';
 
 const mapStateToProps = (state) => {
@@ -25,13 +25,13 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = { 
   loadProjects,
   changeName,
-  errorName,
+  setErrorName,
   changeEmail,
-  errorEmail,
+  setErrorEmail,
   changeSubject,
-  errorSubject,
+  setErrorSubject,
   changeComment,
-  errorComment, 
+  setErrorComment, 
   changeCounter, 
   changeStatus 
 };

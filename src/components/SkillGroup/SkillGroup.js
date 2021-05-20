@@ -130,7 +130,7 @@ const groupsItems = dataGroups.map((data, index) => {
          aria-expanded="false"
          aria-controls={data.idCollapse}
         >
-          {data.title} <i class="bi bi-chevron-down"></i>
+          {data.title} <i className="bi bi-chevron-down"></i>
         </button>
       </h2>
       <div

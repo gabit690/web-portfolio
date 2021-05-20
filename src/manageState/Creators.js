@@ -16,7 +16,7 @@ const changeName = (newName) => {
   };
 };
 
-const errorName = (message) => {
+const setErrorName = (message) => {
   return {
     type: actions.ERROR_INPUT_NAME,
     message
@@ -30,7 +30,7 @@ const changeEmail = (newEmail) => {
   };
 };
 
-const errorEmail = (message) => {
+const setErrorEmail = (message) => {
   return {
     type: actions.ERROR_INPUT_EMAIL,
     message
@@ -44,7 +44,7 @@ const changeSubject = (newSubject) => {
   };
 };
 
-const errorSubject = (message) => {
+const setErrorSubject = (message) => {
   return {
     type: actions.ERROR_INPUT_SUBJECT,
     message
@@ -58,7 +58,7 @@ const changeComment = (newComment) => {
   };
 };
 
-const errorComment = (message) => {
+const setErrorComment = (message) => {
   return {
     type: actions.ERROR_INPUT_COMMENT,
     message
@@ -82,13 +82,13 @@ const changeStatus = (newStatus) => {
 export {
   loadProjects,
   changeName,
-  errorName,
+  setErrorName,
   changeEmail,
-  errorEmail,
+  setErrorEmail,
   changeSubject,
-  errorSubject,
+  setErrorSubject,
   changeComment,
-  errorComment,
+  setErrorComment,
   changeCounter,
   changeStatus
 };
