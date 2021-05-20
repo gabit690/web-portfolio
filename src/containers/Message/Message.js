@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import axios from 'axios';
+import ReCAPTCHA from "react-google-recaptcha";
 
 import Header from '../../components/Header/Header';
 import envelopeAccepted from '../../assets/img/envelope-accepted.png';
@@ -14,10 +15,19 @@ import './Message.css';
 
 const Message = (props) => {
 
+  const captcha = useRef(null);
+  const [errorCaptcha, setErrorCaptcha] = useState("");
+
+  const onChange = () => {
+    if (captcha.current.getValue()) {
+      setErrorCaptcha("");
+    }
+  }
+
   function handleSubmit(event) {
     event.preventDefault();
     const emailRegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
+    
     if (props.messageSection.name == "") {
       props.setErrorName("This field is empty.");
     }
@@ -32,12 +42,16 @@ const Message = (props) => {
     if (props.messageSection.comment == "") {
       props.setErrorComment("This field is empty.");
     }
+    if (captcha.current.getValue() == "") {
+      setErrorCaptcha("Please accept captcha");
+    }
 
     const emailValid = props.messageSection.email && 
                         emailRegExp.test(props.messageSection.email);
     const formValid = props.messageSection.name && emailValid 
                       && props.messageSection.subject 
-                      && props.messageSection.comment;
+                      && props.messageSection.comment
+                      && captcha.current.getValue();
 
     if (formValid) {
       props.changeStatus("sending");
@@ -269,12 +283,22 @@ const Message = (props) => {
                     {props.messageSection.errorComment}
                   </div>
                 </div>
+                <div className="mt-4 d-flex flex-column align-items-center">
+                  <ReCAPTCHA
+                    ref={captcha}
+                    sitekey="6LeDGtwaAAAAAMNzQyGWNkRsm2cKqFDLFaC2Q_8Y"
+                    onChange={onChange}
+                  />
+                  <div className="text-danger">
+                    {errorCaptcha}
+                  </div>
+                </div>
                 <div 
                  className="
                   container-fluid 
                   d-flex 
                   justify-content-evenly 
-                  mt-4
+                  mt-2
                  "
                 >
                   <button type="submit" className="btn btn-primary">
