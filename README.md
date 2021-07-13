@@ -27,4 +27,4 @@ Se puede ver el resultado obtenido [acá][web].
 
 **Profesión:** Developer y eterno autodidacta.
 
-[web]: http://gabit.epizy.com/
+[web]: http://gabit-portfolio.epizy.com
