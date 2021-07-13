@@ -76,6 +76,7 @@ const Message = (props) => {
         }
         })
         .then(result => {
+            console.log("REQUEST:" + result.data);
             if(result.data == "Message has been sent") {
               props.changeStatus("accepted");
             } else {

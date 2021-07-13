@@ -4,10 +4,10 @@
 
   switch($environment) {
     case "production":
-      $servername = "sql304.epizy.com";
-      $username = "epiz_28651847";
-      $password = "qvDhtdtWSX";
-      $database = "epiz_28651847_portfolio";
+      $servername = "sql209.epizy.com";
+      $username = "epiz_29132675";
+      $password = "SiLsdt4RzUHun";
+      $database = "epiz_29132675_portfolio";
       break;
     default:
       $servername = "localhost";

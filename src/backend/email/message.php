@@ -41,6 +41,6 @@
       $result = $mail->send();
       echo 'Message has been sent';
   } catch (Exception $e) {
-      echo "ERROR";
+      echo $e;
   }
 ?>
