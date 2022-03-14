@@ -3,6 +3,10 @@ module.exports = {
     './src/**/*.{html, js}'
   ],
   theme: {
+    fontFamily: {
+      'serif': ['Georgia', 'serif'],
+      'sans': ['Verdana', 'sans-serif']
+    },
     extend: {},
   },
   plugins: [],

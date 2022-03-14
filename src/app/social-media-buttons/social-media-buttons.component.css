@@ -1,0 +1,3 @@
+.social__button {
+  @apply flex justify-center items-center rounded-full w-[56px] h-[56px] md:w-[66px] md:h-[66px];
+}
