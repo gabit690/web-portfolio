@@ -49,7 +49,7 @@ export class MenuComponent implements OnInit {
         break;
     }
     if (this._currentButtonSectionActive !== '') {
-      document.getElementById(this._currentButtonSectionActive)?.classList.add('bg-red-500');
+      document.getElementById(this._currentButtonSectionActive)?.classList.add('bg-teal-500');
     }
   }
 
@@ -61,24 +61,40 @@ export class MenuComponent implements OnInit {
     return this._menuIcon;
   }
 
+  showMenuContent(): void {
+    if (!this._buttonMenuActived) {
+      const menuSections = document.getElementById('menuSections');
+      this._menuIcon = faXmark;
+      menuSections?.classList.remove('h-0');
+      menuSections?.classList.add('h-[220px]');
+      this._buttonMenuActived = true;
+    }
+  }
+
+  hideMenuContent(): void {
+    if (this._buttonMenuActived) {
+      const menuSections = document.getElementById('menuSections');
+      this._menuIcon = faBars;
+      menuSections?.classList.remove('h-[220px]');
+      menuSections?.classList.add('h-0');
+      this._buttonMenuActived = false;
+    }
+  }
+
   toggleMenuContent(): void {
-    const buttonMenu = document.getElementById('buttonMenu');
-    const menuActive = this._buttonMenuActived;
-    const menuSections = document.getElementById('menuSections');
-    this._menuIcon = menuActive ? faBars : faXmark;
-    menuSections?.classList.remove(menuActive ? 'h-52' : 'h-0');
-    menuSections?.classList.add(menuActive ? 'h-0' : 'h-52');
-    this._buttonMenuActived = menuActive ? false : true;
+    if (this._buttonMenuActived) {
+      this.hideMenuContent();
+    } else {
+      this.showMenuContent();
+    }
   }
 
   selectSection(event: any): void {
     const buttonPressed = event.target;
     if (buttonPressed.id !== this._currentButtonSectionActive) {
       const previousButtonActive = document.getElementById(this._currentButtonSectionActive);
-      previousButtonActive?.classList.remove('bg-red-500');
-      previousButtonActive?.classList.add('bg-blue-300');
-      buttonPressed?.classList.remove('bg-blue-300');
-      buttonPressed?.classList.add('bg-red-500');
+      previousButtonActive?.classList.remove('bg-teal-500');
+      buttonPressed?.classList.add('bg-teal-500');
       const currentMarkActive = document.querySelector(`#${this._currentButtonSectionActive} fa-icon`);
       const nextMarkActive = document.querySelector(`#${buttonPressed.id} fa-icon`);
       currentMarkActive?.classList.remove('visible');

@@ -1,7 +1,7 @@
-<div class="relative w-24 p-1 border-2 border-black rounded-full h-11">
-  <button id="switch" class="w-8 h-8 rounded-full bg-neutral-200" (click)="toggleColor()"></button>
+<div class="relative w-24 p-1 border-2 rounded-full md:p-[0.15rem] border-slate-300 h-11 md:h-8">
+  <button id="switch" class="w-8 h-8 md:w-6 md:h-6 rounded-full dark:bg-slate-200 bg-yellow-200 dark:shadow-[0px_0px_3px_1px_black_inset] shadow-[0px_0px_3px_1px_orange_inset] md:mx-[0.15rem]" (click)="toggleColor()"></button>
   <div class="absolute left-0 w-full -translate-y-1/2 pointer-events-none top-1/2 h-fit">
-    <fa-icon id="sunIcon" [icon]="sunIcon" class="float-left ml-2 text-2xl"></fa-icon>
-    <fa-icon id="moonIcon" [icon]="moonIcon" class="float-right mr-2 text-2xl"></fa-icon>
+    <fa-icon id="sunIcon" [icon]="sunIcon" class="float-left ml-[10px] xl:ml-[12px] text-xl md:text-base"></fa-icon>
+    <fa-icon id="moonIcon" [icon]="moonIcon" class="float-right mr-[10px] xl:mr-[12px] text-xl md:text-base"></fa-icon>
   </div>
 </div>
