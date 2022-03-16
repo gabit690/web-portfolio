@@ -1,0 +1,7 @@
+<div class="relative w-24 p-1 border-2 border-black rounded-full h-11">
+  <button id="switch" class="w-8 h-8 rounded-full bg-neutral-200" (click)="toggleColor()"></button>
+  <div class="absolute left-0 w-full -translate-y-1/2 pointer-events-none top-1/2 h-fit">
+    <fa-icon id="sunIcon" [icon]="sunIcon" class="float-left ml-2 text-2xl"></fa-icon>
+    <fa-icon id="moonIcon" [icon]="moonIcon" class="float-right mr-2 text-2xl"></fa-icon>
+  </div>
+</div>

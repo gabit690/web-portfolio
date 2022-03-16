@@ -1,6 +1,8 @@
 module.exports = {
   content: [
-    './src/**/*.{html, js}'
+    './src/**/*.{html, js}',
+    './src/**/dark-mode.component.ts',
+    './src/**/menu.component.ts'
   ],
   theme: {
     fontFamily: {

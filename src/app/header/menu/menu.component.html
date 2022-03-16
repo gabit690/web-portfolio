@@ -1,0 +1,10 @@
+<nav class="relative flex flex-col h-14 bg-slate-400">
+  <fa-icon id="buttonMenu" [icon]="menuIcon" class="flex items-center justify-center text-4xl border-r-2 border-red-500 h-14 inactive" (click)="toggleMenuContent()"></fa-icon>
+  <ul id="menuSections" class="absolute w-screen h-0 overflow-hidden !transition-all top-14">
+    <li><a id="homeButton" [routerLink]="['/']" class="flex justify-between px-4 pt-2 pb-1 bg-blue-300 border-b-4" (click)="selectSection($event)">Home<fa-icon [icon]="checkIcon" class="invisible text-xl md:hidden"></fa-icon></a></li>
+    <li><a id="aboutMeButton" [routerLink]="['/aboutme']" class="flex justify-between px-4 pt-2 pb-1 bg-blue-300 border-b-4" (click)="selectSection($event)">About me<fa-icon [icon]="checkIcon" class="invisible text-xl md:hidden"></fa-icon></a></li>
+    <li><a id="skillsButton" [routerLink]="['/skills']" class="flex justify-between px-4 pt-2 pb-1 bg-blue-300 border-b-4" (click)="selectSection($event)">Skills<fa-icon [icon]="checkIcon" class="invisible text-xl md:hidden"></fa-icon></a></li>
+    <li><a id="projectsButton" [routerLink]="['/projects']" class="flex justify-between px-4 pt-2 pb-1 bg-blue-300 border-b-4" (click)="selectSection($event)">Projects<fa-icon [icon]="checkIcon" class="invisible text-xl md:hidden"></fa-icon></a></li>
+    <li><a id="contactButton" [routerLink]="['/contact']" class="flex justify-between px-4 pt-2 pb-1 bg-blue-300 border-b-4" (click)="selectSection($event)">Contact<fa-icon [icon]="checkIcon" class="invisible text-xl md:hidden"></fa-icon></a></li>
+  </ul>
+</nav>
