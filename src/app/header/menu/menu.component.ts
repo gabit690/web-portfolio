@@ -49,7 +49,7 @@ export class MenuComponent implements OnInit {
         break;
     }
     if (this._currentButtonSectionActive !== '') {
-      document.getElementById(this._currentButtonSectionActive)?.classList.add('bg-teal-500');
+      document.getElementById(this._currentButtonSectionActive)?.classList.add('!border-b-teal-400', 'md:!border-b-8');
     }
   }
 
@@ -93,8 +93,8 @@ export class MenuComponent implements OnInit {
     const buttonPressed = event.target;
     if (buttonPressed.id !== this._currentButtonSectionActive) {
       const previousButtonActive = document.getElementById(this._currentButtonSectionActive);
-      previousButtonActive?.classList.remove('bg-teal-500');
-      buttonPressed?.classList.add('bg-teal-500');
+      previousButtonActive?.classList.remove('!border-b-teal-400', 'md:!border-b-8');
+      buttonPressed?.classList.add('!border-b-teal-400', 'md:!border-b-8');
       const currentMarkActive = document.querySelector(`#${this._currentButtonSectionActive} fa-icon`);
       const nextMarkActive = document.querySelector(`#${buttonPressed.id} fa-icon`);
       currentMarkActive?.classList.remove('visible');
@@ -102,6 +102,7 @@ export class MenuComponent implements OnInit {
       nextMarkActive?.classList.remove('invisible');
       nextMarkActive?.classList.add('visible');
       this._currentButtonSectionActive = buttonPressed.id;
+      this.hideMenuContent();
     }
   }
 }
