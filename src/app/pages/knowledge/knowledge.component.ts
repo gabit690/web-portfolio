@@ -48,22 +48,12 @@ export class KnowledgeComponent implements OnInit {
 
   toogleContent(buttonId: string): void {
     const sectionContent = document.querySelector(`#${buttonId} + div`);
-    console.log(sectionContent);
-    if (this._activeCurrentButton === buttonId) {
-      sectionContent?.classList.replace('h-fit', 'h-0');
-      this._activeCurrentButton = '';
-      console.log('HIDE');
-    } else {
-      if (this._activeCurrentButton !== '') {
-        const previousButton = document.querySelector(`#${this._activeCurrentButton} + div`);
-        previousButton?.classList.replace('h-fit', 'h-0');
-        console.log(previousButton);
-        console.log('PREVIOUS');
-      }
-      sectionContent?.classList.replace('h-0', 'h-fit');
-      this._activeCurrentButton = buttonId;
-      console.log('SHOW');
+    const closeOtherContent = (this._activeCurrentButton === buttonId);
+    if (this._activeCurrentButton !== '') {
+      const previousButton = document.querySelector(`#${this._activeCurrentButton} + div`);
+      previousButton?.classList.replace('h-fit', 'h-0');
     }
+    sectionContent?.classList.replace(closeOtherContent ? 'h-fit' : 'h-0', closeOtherContent ? 'h-0' : 'h-fit');
+    this._activeCurrentButton = closeOtherContent ? '' : buttonId;
   }
-
 }
