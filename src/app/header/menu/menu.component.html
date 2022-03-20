@@ -1,9 +1,8 @@
 <nav class="relative flex flex-col border-r-2 md:border-r-0 md:static h-14 border-slate-300 md:h-11">
   <fa-icon id="buttonMenu" [icon]="menuIcon" class="flex items-center justify-center text-4xl h-14 inactive text-slate-300 md:hidden" (click)="toggleMenuContent()"></fa-icon>
   <ul id="menuSections" class="absolute md:static w-screen md:w-full h-0 overflow-hidden !transition-all md:!transition-none top-14 dark:bg-indigo-200 bg-indigo-800 dark:text-indigo-900 text-slate-200 md:flex md:h-full md:dark:bg-indigo-900 md:bg-indigo-900 md:dark:text-slate-200 md:text-slate-200 z-50">
-    <li class="md:flex-1"><a id="homeButton" [routerLink]="['/']" class="menu__item" (click)="selectSection($event)">Home<fa-icon [icon]="checkIcon" class="invisible text-xl md:hidden"></fa-icon></a></li>
-    <li class="md:flex-1"><a id="aboutMeButton" [routerLink]="['/aboutme']" class="menu__item" (click)="selectSection($event)">About me<fa-icon [icon]="checkIcon" class="invisible text-xl md:hidden"></fa-icon></a></li>
-    <li class="md:flex-1"><a id="skillsButton" [routerLink]="['/skills']" class="menu__item" (click)="selectSection($event)">Skills<fa-icon [icon]="checkIcon" class="invisible text-xl md:hidden"></fa-icon></a></li>
+    <li class="md:flex-1"><a id="developerButton" [routerLink]="['/']" class="menu__item" (click)="selectSection($event)">Developer<fa-icon [icon]="checkIcon" class="invisible text-xl md:hidden"></fa-icon></a></li>
+    <li class="md:flex-1"><a id="knowledgeButton" [routerLink]="['/knowledge']" class="menu__item" (click)="selectSection($event)">Knowledge<fa-icon [icon]="checkIcon" class="invisible text-xl md:hidden"></fa-icon></a></li>
     <li class="md:flex-1"><a id="projectsButton" [routerLink]="['/projects']" class="menu__item" (click)="selectSection($event)">Projects<fa-icon [icon]="checkIcon" class="invisible text-xl md:hidden"></fa-icon></a></li>
     <li class="md:flex-1"><a id="contactButton" [routerLink]="['/contact']" class="menu__item" (click)="selectSection($event)">Contact<fa-icon [icon]="checkIcon" class="invisible text-xl md:hidden"></fa-icon></a></li>
   </ul>

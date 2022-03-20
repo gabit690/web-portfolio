@@ -1,0 +1,135 @@
+{
+  "languages": [
+    {
+      "name": "HTML5",
+      "path": "./assets/img/html-logo.png",
+      "alt": "Logo of Hyper text markup language"
+    },
+    {
+      "name": "CSS3",
+      "path": "./assets/img/css-logo.png",
+      "alt": "Logo of Cascadin Style Sheet language"
+    },
+    {
+      "name": "JAVASCRIPT",
+      "path": "./assets/img/javascript-logo.png",
+      "alt": "Logo of Javascript language"
+    },
+    {
+      "name": "JAVA",
+      "path": "./assets/img/java-logo.png",
+      "alt": "Logo of Java language"
+    },
+    {
+      "name": "PHP",
+      "path": "./assets/img/php-logo.png",
+      "alt": "Logo of PHP language"
+    },
+    {
+      "name": "PYTHON",
+      "path": "./assets/img/python-logo.png",
+      "alt": "Logo of Python language"
+    },
+    {
+      "name": "SQL",
+      "path": "./assets/img/sql-logo.png",
+      "alt": "Logo of SQL language"
+    },
+    {
+      "name": "TYPESCRIPT",
+      "path": "./assets/img/typescript-logo.png",
+      "alt": "Logo of Typescript language"
+    },
+    {
+      "name": "C",
+      "path": "./assets/img/c-logo.png",
+      "alt": "Logo of C language"
+    },
+    {
+      "name": "C++",
+      "path": "./assets/img/cpp-logo.png",
+      "alt": "Logo of C++ language"
+    }
+  ],
+  "frameworks": [
+    {
+      "name": "ANGULAR",
+      "path": "./assets/img/angular-logo.png",
+      "alt": "Logo of Angular framework"
+    },
+    {
+      "name": "BOOTSTRAP",
+      "path": "./assets/img/bootstrap-logo.png",
+      "alt": "Logo of Bootstrap framework"
+    },
+    {
+      "name": "EXPRESS",
+      "path": "./assets/img/express-logo.png",
+      "alt": "Logo of Express framework"
+    }
+  ],
+  "libraries": [
+    {
+      "name": "JQUERY",
+      "path": "./assets/img/jquery-logo.png",
+      "alt": "Logo of Jquery library"
+    },
+    {
+      "name": "REACT",
+      "path": "./assets/img/react-logo.png",
+      "alt": "Logo of React library"
+    },
+    {
+      "name": "REDUX",
+      "path": "./assets/img/redux-logo.png",
+      "alt": "Logo of Redux library"
+    }
+  ],
+  "devtools": [
+    {
+      "name": "ECLIPSE",
+      "path": "./assets/img/eclipse-logo.png",
+      "alt": "Logo of Eclipse IDE"
+    },
+    {
+      "name": "GIT",
+      "path": "./assets/img/git-logo.png",
+      "alt": "Logo of Git VCS"
+    },
+    {
+      "name": "MYSQL",
+      "path": "./assets/img/mysql-logo.png",
+      "alt": "Logo of MySql RDBMS"
+    },    
+    {
+      "name": "NODEJS",
+      "path": "./assets/img/nodejs-logo.png",
+      "alt": "Logo of NodeJS Runtime"
+    },
+    {
+      "name": "POSTCSS",
+      "path": "./assets/img/postcss-logo.png",
+      "alt": "Logo of Postcss postprocessor"
+    },
+    {
+      "name": "POSTMAN",
+      "path": "./assets/img/postman-logo.png",
+      "alt": "Logo of Postman"
+    },
+    {
+      "name": "SASS",
+      "path": "./assets/img/sass-logo.png",
+      "alt": "Logo of Sass preprocessor"
+    },
+    {
+      "name": "TAILWIND",
+      "path": "./assets/img/tailwind-logo.png",
+      "alt": "Logo of Tailwind postprocessor"
+    },
+    {
+      "name": "VISUAL CODE",
+      "path": "./assets/img/visual-code-logo.png",
+      "alt": "Logo of Visual Code"
+    }
+  ]
+}

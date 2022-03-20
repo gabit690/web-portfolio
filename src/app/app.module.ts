@@ -5,24 +5,21 @@ import { LocalStorageService } from './services/local-storage.service';
 import { Route, RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 
-
 import { AppComponent } from './app.component';
 import { SocialMediaButtonsComponent } from './social-media-buttons/social-media-buttons.component';
 import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './header/menu/menu.component';
 import { DarkModeComponent } from './header/dark-mode/dark-mode.component';
-import { HomeComponent } from './pages/home/home.component';
-import { AboutMeComponent } from './pages/about-me/about-me.component';
-import { SkillsComponent } from './pages/skills/skills.component';
+import { KnowledgeComponent } from './pages/knowledge/knowledge.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { FooterComponent } from './footer/footer.component';
+import { DeveloperComponent } from './pages/developer/developer.component';
 
 const routes: Route[] = [
-  {path:'', component:HomeComponent},
-  {path:'aboutme', component:AboutMeComponent},
-  {path:'skills', component:SkillsComponent},
+  {path:'', component:DeveloperComponent},
+  {path:'knowledge', component:KnowledgeComponent},
   {path:'projects', component:ProjectsComponent},
   {path:'contact', component:ContactComponent},
   {path:'**', component:ErrorPageComponent}
@@ -35,9 +32,8 @@ const routes: Route[] = [
     HeaderComponent,
     MenuComponent,
     DarkModeComponent,
-    HomeComponent,
-    AboutMeComponent,
-    SkillsComponent,
+    DeveloperComponent,
+    KnowledgeComponent,
     ProjectsComponent,
     ContactComponent,
     ErrorPageComponent,

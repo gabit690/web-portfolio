@@ -22,17 +22,12 @@ export class MenuComponent implements OnInit {
       case '/':
         checkIcons[0].classList.remove('invisible');
         checkIcons[0].classList.add('visible');
-        this._currentButtonSectionActive = 'homeButton';
+        this._currentButtonSectionActive = 'developerButton';
         break;
-      case '/aboutme':
+      case '/knowledge':
         checkIcons[1].classList.remove('invisible');
         checkIcons[1].classList.add('visible');
-        this._currentButtonSectionActive = 'aboutMeButton';
-        break;
-      case '/skills':
-        checkIcons[2].classList.remove('invisible');
-        checkIcons[2].classList.add('visible');
-        this._currentButtonSectionActive = 'skillsButton';
+        this._currentButtonSectionActive = 'knowledgeButton';
         break;
       case '/projects':
         checkIcons[3].classList.remove('invisible');
@@ -66,7 +61,7 @@ export class MenuComponent implements OnInit {
       const menuSections = document.getElementById('menuSections');
       this._menuIcon = faXmark;
       menuSections?.classList.remove('h-0');
-      menuSections?.classList.add('h-[220px]');
+      menuSections?.classList.add('h-44');
       this._buttonMenuActived = true;
     }
   }
@@ -75,7 +70,7 @@ export class MenuComponent implements OnInit {
     if (this._buttonMenuActived) {
       const menuSections = document.getElementById('menuSections');
       this._menuIcon = faBars;
-      menuSections?.classList.remove('h-[220px]');
+      menuSections?.classList.remove('h-44');
       menuSections?.classList.add('h-0');
       this._buttonMenuActived = false;
     }
@@ -102,7 +97,7 @@ export class MenuComponent implements OnInit {
       nextMarkActive?.classList.remove('invisible');
       nextMarkActive?.classList.add('visible');
       this._currentButtonSectionActive = buttonPressed.id;
-      this.hideMenuContent();
     }
+    this.hideMenuContent();
   }
 }
