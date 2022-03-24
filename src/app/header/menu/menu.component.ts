@@ -20,23 +20,19 @@ export class MenuComponent implements OnInit {
     const checkIcons = document.querySelectorAll('#menuSections fa-icon');
     switch(currentRuote) {
       case '/':
-        checkIcons[0].classList.remove('invisible');
-        checkIcons[0].classList.add('visible');
+        checkIcons[0].classList.replace('invisible', 'visible');
         this._currentButtonSectionActive = 'developerButton';
         break;
       case '/knowledge':
-        checkIcons[1].classList.remove('invisible');
-        checkIcons[1].classList.add('visible');
+        checkIcons[1].classList.replace('invisible', 'visible');
         this._currentButtonSectionActive = 'knowledgeButton';
         break;
       case '/projects':
-        checkIcons[3].classList.remove('invisible');
-        checkIcons[3].classList.add('visible');
+        checkIcons[2].classList.replace('invisible', 'visible');
         this._currentButtonSectionActive = 'projectsButton';
         break;
       case '/contact':
-        checkIcons[4].classList.remove('invisible');
-        checkIcons[4].classList.add('visible');
+        checkIcons[3].classList.replace('invisible', 'visible');
         this._currentButtonSectionActive = 'contactButton';
         break;
       default:
@@ -61,7 +57,7 @@ export class MenuComponent implements OnInit {
       const menuSections = document.getElementById('menuSections');
       this._menuIcon = faXmark;
       menuSections?.classList.remove('h-0');
-      menuSections?.classList.add('h-44');
+      menuSections?.classList.add('h-[178px]');
       this._buttonMenuActived = true;
     }
   }
@@ -70,8 +66,7 @@ export class MenuComponent implements OnInit {
     if (this._buttonMenuActived) {
       const menuSections = document.getElementById('menuSections');
       this._menuIcon = faBars;
-      menuSections?.classList.remove('h-44');
-      menuSections?.classList.add('h-0');
+      menuSections?.classList.replace('h-[178px]', 'h-0');
       this._buttonMenuActived = false;
     }
   }
@@ -92,10 +87,8 @@ export class MenuComponent implements OnInit {
       buttonPressed?.classList.add('!border-b-teal-400', 'md:!border-b-8');
       const currentMarkActive = document.querySelector(`#${this._currentButtonSectionActive} fa-icon`);
       const nextMarkActive = document.querySelector(`#${buttonPressed.id} fa-icon`);
-      currentMarkActive?.classList.remove('visible');
-      currentMarkActive?.classList.add('invisible');
-      nextMarkActive?.classList.remove('invisible');
-      nextMarkActive?.classList.add('visible');
+      currentMarkActive?.classList.replace('visible', 'invisible');
+      nextMarkActive?.classList.replace('invisible', 'visible');
       this._currentButtonSectionActive = buttonPressed.id;
     }
     this.hideMenuContent();

@@ -1,17 +1,18 @@
-<section class="px-4 py-8">
-  <div class="flex flex-col border-8 border-indigo-900 border-double md:w-4/5 md:mx-auto md:flex-row md:items-center xl:w-3/4">
-    <div class="px-2 md:self-stretch md:flex md:flex-col md:justify-evenly md:w-2/5 md:border-r-2 md:border-indigo-900">
-      <img src="../../../assets/img/user.png" alt="profile" class="w-4/5 mx-auto my-4 rounded-full outline-double outline-offset-4 outline-teal-500 outline-4 xl:w-3/5">
-      <p class="font-sans text-sm font-bold text-center">J. Gabit Valeriano</p>
-      <p class="font-sans text-sm font-bold text-center">Software developer</p>
-      <p class="font-sans text-sm font-bold text-center">Flores, C.A.B.A.</p>
-      <app-social-media-buttons class=""></app-social-media-buttons>
+<div class="flex flex-col w-[65%] min-w-[320px] mx-auto my-10 border-8 border-indigo-900 border-double dark:border-slate-300 md:w-4/5 md:flex-row md:items-center xl:w-3/4">
+  <div class="border-b-2 md:border-b-0 border-b-indigo-900 dark:border-b-slate-300 md:px-2 md:self-stretch md:flex md:flex-col md:justify-evenly md:w-[45%] md:border-r-2 md:border-indigo-900 dark:md:border-slate-300">
+    <img src="../../../assets/img/user.png" alt="profile" class="w-3/5 mx-auto mt-8 mb-4 rounded-full outline-double outline-offset-1 outline-indigo-900 dark:outline-slate-300 outline-8 xl:w-3/5">
+    <div class="mx-auto font-sans text-sm font-semibold w-fit">
+      <p class="dark:text-slate-300"><fa-icon [icon]="user" class="mr-2 text-indigo-900 dark:text-inherit"></fa-icon>J. Gabit Valeriano</p>
+      <p class="dark:text-slate-300"><fa-icon [icon]="briefcase" class="mr-2 text-slate-900 dark:text-inherit"></fa-icon>Software developer</p>
+      <p class="dark:text-slate-300"><fa-icon [icon]="location" class="pr-1 mr-2 text-red-600 dark:text-inherit"></fa-icon>Flores, C.A.B.A.</p>
     </div>
-    <div class="py-4 md:py-0 md:w-3/5 xl:px-8 md:self-stretch md:flex md:flex-col md:justify-evenly">
-      <p class="font-sans text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      <p class="font-sans text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      <p class="font-sans text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-    </div>
+    <app-social-media-buttons class=""></app-social-media-buttons>
   </div>
-</section>
+  <div class="p-4 font-sans md:py-0 md:w-[55%] xl:px-8 md:self-stretch md:flex md:flex-col md:justify-evenly dark:text-slate-300">
+    <p class="mb-4 md:mt-4">Hello visitor. Welcome to my personal portfolio.</p>
+    <p class="mb-4">I'm an enthusiastic learner of technology in general and programming in particular.</p>
+    <p class="mb-4">I' want to be a more efficient developer every day and integrate diverse groups with which to generate solutions that improve people's lives.</p>
+    <p class="mb-4">I hope you enjoy your visit.</p>
+    <p class="text-right md:mb-4">See you, Gabit.</p>
+  </div>
+</div>

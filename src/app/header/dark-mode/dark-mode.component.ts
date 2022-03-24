@@ -5,7 +5,7 @@ import { LocalStorageService } from 'src/app/services/local-storage.service';
 @Component({
   selector: 'app-dark-mode',
   templateUrl: './dark-mode.component.html',
-  styleUrls: ['./dark-mode.component.css']
+  styleUrls: []
 })
 export class DarkModeComponent implements OnInit {
 
@@ -20,8 +20,8 @@ export class DarkModeComponent implements OnInit {
     const iconActive = document.getElementById(this.storage.isDarkTheme() ? 'moonIcon' : 'sunIcon');
     const iconUnactive = document.getElementById(this.storage.isDarkTheme() ? 'sunIcon' : 'moonIcon');
     switchButton.classList.add(this.storage.isDarkTheme() ? 'float-right' : 'float-left');
-    iconActive?.classList.add(this.storage.isDarkTheme() ? 'text-black' : 'text-orange-400');
-    iconUnactive?.classList.add('text-slate-500');
+    iconActive?.classList.add(this.storage.isDarkTheme() ? 'text-slate-900' : 'text-orange-400');
+    iconUnactive?.classList.add('text-slate-600');
   }
 
   get sunIcon(): any {
@@ -40,10 +40,10 @@ export class DarkModeComponent implements OnInit {
       const nextIconActive = document.getElementById(darkModeActive ? 'sunIcon' : 'moonIcon');
       switchButton.classList.remove(darkModeActive ? 'float-right' : 'float-left');
       switchButton.classList.add(darkModeActive ? 'float-left' : 'float-right');
-      currentIconActive?.classList.remove(darkModeActive ? 'text-black' : 'text-orange-400');
-      currentIconActive?.classList.add('text-slate-500');
-      nextIconActive?.classList.add(darkModeActive ? 'text-orange-400' : 'text-black');
-      nextIconActive?.classList.remove('text-slate-500');
+      currentIconActive?.classList.remove(darkModeActive ? 'text-slate-900' : 'text-orange-400');
+      currentIconActive?.classList.add('text-slate-600');
+      nextIconActive?.classList.add(darkModeActive ? 'text-orange-400' : 'text-slate-900');
+      nextIconActive?.classList.remove('text-slate-600');
       this.storage.toggleTheme();
     } else {
       alert('There is a problem with this button. Reload the page could fix it.');
