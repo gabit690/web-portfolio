@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { faBriefcase, faCircleUser, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-developer',
-  templateUrl: './developer.component.html',
+  selector: 'app-introduction',
+  templateUrl: './introduction.component.html',
   styleUrls: []
 })
-export class DeveloperComponent implements OnInit {
+export class IntroductionComponent implements OnInit {
 
   private _userIcon = faCircleUser;
   private _briefcaseIcon = faBriefcase;

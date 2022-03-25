@@ -15,10 +15,10 @@ import { ProjectsComponent } from './pages/projects/projects.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { FooterComponent } from './footer/footer.component';
-import { DeveloperComponent } from './pages/developer/developer.component';
+import { IntroductionComponent } from './pages/introduction/introduction.component';
 
 const routes: Route[] = [
-  {path:'', component:DeveloperComponent},
+  {path:'', component:IntroductionComponent},
   {path:'knowledge', component:KnowledgeComponent},
   {path:'projects', component:ProjectsComponent},
   {path:'contact', component:ContactComponent},
@@ -32,7 +32,7 @@ const routes: Route[] = [
     HeaderComponent,
     MenuComponent,
     DarkModeComponent,
-    DeveloperComponent,
+    IntroductionComponent,
     KnowledgeComponent,
     ProjectsComponent,
     ContactComponent,

@@ -5,7 +5,7 @@ import logos from '../../../assets/logos.json';
 @Component({
   selector: 'app-knowledge',
   templateUrl: './knowledge.component.html',
-  styleUrls: ['./knowledge.component.css']
+  styleUrls: []
 })
 export class KnowledgeComponent implements OnInit {
 
@@ -51,9 +51,9 @@ export class KnowledgeComponent implements OnInit {
     const closeOtherContent = (this._activeCurrentButton === buttonId);
     if (this._activeCurrentButton !== '') {
       const previousButton = document.querySelector(`#${this._activeCurrentButton} + div`);
-      previousButton?.classList.replace('h-fit', 'h-0');
+      previousButton?.classList.replace('grid', 'hidden');
     }
-    sectionContent?.classList.replace(closeOtherContent ? 'h-fit' : 'h-0', closeOtherContent ? 'h-0' : 'h-fit');
+    sectionContent?.classList.replace(closeOtherContent ? 'grid' : 'hidden', closeOtherContent ? 'hidden' : 'grid');
     this._activeCurrentButton = closeOtherContent ? '' : buttonId;
   }
 }

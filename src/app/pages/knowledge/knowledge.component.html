@@ -1,38 +1,38 @@
-<ul class="w-4/5 mx-auto bg-red-300">
+<ul class="w-[80vw] min-w-[300px] max-w-[1000px] my-8 border-b-2 border-indigo-900 dark:border-slate-300">
   <li>
-    <button id="languageButton" class="w-full py-3 outline outline-blue-500" (click)="toogleContent(languageBtn.id)" #languageBtn>Languages <fa-icon [icon]="angleDownIcon"></fa-icon></button>
-    <div class="grid h-0 grid-cols-4 grid-rows-1 overflow-hidden bg-yellow-300">
-        <div  *ngFor="let language of languages" class="flex flex-col items-center justify-evenly bg-slate-300 aspect-square">
+    <button id="languageButton" class="w-full py-4 text-lg font-bold text-indigo-900 bg-orange-400 border-t-4 border-b-2 border-indigo-900 border-x-4 dark:text-slate-300 dark:bg-inherit dark:border-slate-300" (click)="toogleContent(languageBtn.id)" #languageBtn>Languages <fa-icon [icon]="angleDownIcon"></fa-icon></button>
+    <div class="hidden grid-cols-4 grid-rows-1 overflow-hidden border-indigo-900 xl:grid-cols-8 md:grid-cols-5 border-x-4 bg-inherit dark:border-slate-300">
+        <div  *ngFor="let language of languages" class="flex flex-col items-center justify-evenly bg-inherit aspect-square">
             <img [src]="language.path" [alt]="language.alt" class="w-1/2" loading="lazy">
-          <p class="text-[0.5rem] font-bold">{{ language.name }}</p>
+          <p class="text-[0.5rem] font-bold dark:text-slate-300">{{ language.name }}</p>
         </div>
     </div>
   </li>
   <li>
-    <button id="frameworkButton" class="w-full py-3 outline outline-blue-500" (click)="toogleContent(frameworkBtn.id)" #frameworkBtn>Frameworks <fa-icon [icon]="angleDownIcon"></fa-icon></button>
-    <div class="grid h-0 grid-cols-4 grid-rows-1 overflow-hidden bg-yellow-300">
-        <div  *ngFor="let framework of frameworks" class="flex flex-col items-center justify-evenly bg-slate-300 aspect-square">
+    <button id="frameworkButton" class="w-full py-4 text-lg font-bold text-indigo-900 bg-orange-400 border-indigo-900 border-x-4 border-y-2 dark:text-slate-300 dark:bg-inherit dark:border-slate-300" (click)="toogleContent(frameworkBtn.id)" #frameworkBtn>Frameworks <fa-icon [icon]="angleDownIcon"></fa-icon></button>
+    <div class="hidden grid-cols-4 grid-rows-1 overflow-hidden border-indigo-900 xl:grid-cols-8 md:grid-cols-5 border-x-4 bg-inherit dark:border-slate-300">
+        <div  *ngFor="let framework of frameworks" class="flex flex-col items-center justify-evenly bg-inherit aspect-square">
             <img [src]="framework.path" [alt]="framework.alt" class="w-1/2" loading="lazy">
-          <p class="text-[0.5rem] font-bold">{{ framework.name }}</p>
+          <p class="text-[0.5rem] font-bold dark:text-slate-300">{{ framework.name }}</p>
         </div>
     </div>
   </li>
   <li>
-    <button id="libraryButton" class="w-full py-3 outline outline-blue-500" (click)="toogleContent(libraryBtn.id)" #libraryBtn>Libraries <fa-icon [icon]="angleDownIcon"></fa-icon></button>
-    <div class="grid h-0 grid-cols-4 grid-rows-1 overflow-hidden bg-yellow-300">
-        <div  *ngFor="let library of libraries" class="flex flex-col items-center justify-evenly bg-slate-300 aspect-square">
+    <button id="libraryButton" class="w-full py-4 text-lg font-bold text-indigo-900 bg-orange-400 border-indigo-900 dark:text-slate-300 dark:bg-inherit border-x-4 border-y-2 dark:border-slate-300" (click)="toogleContent(libraryBtn.id)" #libraryBtn>Libraries <fa-icon [icon]="angleDownIcon"></fa-icon></button>
+    <div class="hidden grid-cols-4 grid-rows-1 overflow-hidden border-indigo-900 xl:grid-cols-8 md:grid-cols-5 border-x-4 bg-inherit dark:border-slate-300">
+        <div  *ngFor="let library of libraries" class="flex flex-col items-center justify-evenly bg-inherit aspect-square">
             <img [src]="library.path" [alt]="library.alt" class="w-1/2" loading="lazy">
-          <p class="text-[0.5rem] font-bold">{{ library.name }}</p>
+          <p class="text-[0.5rem] font-bold dark:text-slate-300">{{ library.name }}</p>
         </div>
     </div>
   </li>
   <li>
-    <button id="devtoolButton" class="w-full py-3 outline outline-blue-500" (click)="toogleContent(toolBtn.id)" #toolBtn>Devtools <fa-icon [icon]="angleDownIcon"></fa-icon></button>
-    <div class="grid h-0 grid-cols-4 grid-rows-1 overflow-hidden bg-yellow-300">
-        <div  *ngFor="let tool of tools" class="flex flex-col items-center justify-evenly bg-slate-300 aspect-square">
+    <button id="devtoolButton" class="w-full py-4 text-lg font-bold text-indigo-900 bg-orange-400 border-indigo-900 border-y-2 dark:text-slate-300 dark:bg-inherit border-x-4 dark:border-slate-300" (click)="toogleContent(toolBtn.id)" #toolBtn>Devtools <fa-icon [icon]="angleDownIcon"></fa-icon></button>
+    <div class="hidden grid-cols-4 grid-rows-1 overflow-hidden border-indigo-900 xl:grid-cols-8 md:grid-cols-5 border-x-4 bg-inherit dark:border-slate-300">
+        <div  *ngFor="let tool of tools" class="flex flex-col items-center justify-evenly bg-inherit aspect-square">
             <img [src]="tool.path" [alt]="tool.alt" class="w-1/2" loading="lazy">
-          <p class="text-[0.5rem] font-bold">{{ tool.name }}</p>
+          <p class="text-[0.5rem] font-bold dark:text-slate-300">{{ tool.name }}</p>
         </div>
     </div>
   </li>
-</ul>
+</ul>  

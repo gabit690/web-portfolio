@@ -3,7 +3,7 @@
 }
 
 .form__input {
-  @apply w-full px-4 py-2 rounded-lg border-2 border-indigo-900 focus:outline-blue-500 bg-inherit;
+  @apply w-full px-4 py-2 rounded-lg border-2 focus:outline-blue-500 bg-inherit;
 }
 
 .form__input:not(:placeholder-shown) {
@@ -15,5 +15,5 @@
 }
 
 .form__input:focus + .form__label, .form__input:not(:placeholder-shown).form__input:not(:focus) + .form__label {
-  @apply -top-3 text-sm font-bold text-slate-600 px-2 left-2 bg-inherit;
+  @apply -top-3 text-sm font-bold text-slate-500 px-2 left-2 bg-inherit;
 }

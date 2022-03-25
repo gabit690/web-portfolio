@@ -21,7 +21,7 @@ export class MenuComponent implements OnInit {
     switch(currentRuote) {
       case '/':
         checkIcons[0].classList.replace('invisible', 'visible');
-        this._currentButtonSectionActive = 'developerButton';
+        this._currentButtonSectionActive = 'introductionButton';
         break;
       case '/knowledge':
         checkIcons[1].classList.replace('invisible', 'visible');
