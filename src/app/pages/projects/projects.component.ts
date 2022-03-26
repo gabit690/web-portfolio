@@ -5,7 +5,7 @@ import projects from '../../../assets/thumbnails.json';
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.css']
+  styleUrls: []
 })
 export class ProjectsComponent implements OnInit {
 

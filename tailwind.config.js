@@ -3,7 +3,8 @@ module.exports = {
     './src/**/*.{html, js}',
     './src/**/dark-mode.component.ts',
     './src/**/menu.component.ts',
-    './src/**/presentation.component.ts'
+    './src/**/presentation.component.ts',
+    './src/**/knowledge.component.ts'
   ],
   theme: {
     fontFamily: {

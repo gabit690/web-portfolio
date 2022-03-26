@@ -31,15 +31,15 @@ export class PresentationComponent implements OnInit {
   }
   
   private removePresentation(): void {
-    const presentation = document.getElementById('presentation')!;
-    document.getElementsByTagName('app-presentation')[0].removeChild(presentation);
+    const presentation = document.querySelector(`app-root app-presentation`)!;
+    document.querySelector('app-root > div')!.removeChild(presentation);
   }
 
   quitPresentation(): void {
     this.storage.savePresentationViewed();
     const presentation = document.getElementById('presentation')!;
     presentation.classList.add('-translate-x-full');
-    // setTimeout(() => this.removePresentation(), 3000);
+    setTimeout(() => this.removePresentation(), 30);
   }
 
 }
