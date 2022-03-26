@@ -4,6 +4,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LocalStorageService } from './services/local-storage.service';
 import { Route, RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { SocialMediaButtonsComponent } from './social-media-buttons/social-media-buttons.component';
@@ -45,6 +46,7 @@ const routes: Route[] = [
     BrowserModule,
     FontAwesomeModule,
     ReactiveFormsModule,
+    HttpClientModule,
     RouterModule.forRoot(routes)
   ],
   providers: [LocalStorageService],

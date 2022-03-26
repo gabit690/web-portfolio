@@ -82,12 +82,14 @@ export class MenuComponent implements OnInit {
   selectSection(event: any): void {
     const buttonPressed = event.target;
     if (buttonPressed.id !== this._currentButtonSectionActive) {
-      const previousButtonActive = document.getElementById(this._currentButtonSectionActive);
-      previousButtonActive?.classList.remove('!border-b-teal-400', 'md:!border-b-8');
+      if (this._currentButtonSectionActive) {
+        const previousButtonActive = document.getElementById(this._currentButtonSectionActive);
+        previousButtonActive?.classList.remove('!border-b-teal-400', 'md:!border-b-8');
+        const currentMarkActive = document.querySelector(`#${this._currentButtonSectionActive} fa-icon`);
+        currentMarkActive?.classList.replace('visible', 'invisible');
+      }
       buttonPressed?.classList.add('!border-b-teal-400', 'md:!border-b-8');
-      const currentMarkActive = document.querySelector(`#${this._currentButtonSectionActive} fa-icon`);
       const nextMarkActive = document.querySelector(`#${buttonPressed.id} fa-icon`);
-      currentMarkActive?.classList.replace('visible', 'invisible');
       nextMarkActive?.classList.replace('invisible', 'visible');
       this._currentButtonSectionActive = buttonPressed.id;
     }

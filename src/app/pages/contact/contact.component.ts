@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { NetlifyFormsService } from 'src/app/services/netlify-forms.service';
 
 @Component({
   selector: 'app-contact',
@@ -9,8 +10,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ContactComponent implements OnInit {
 
   private _contactForm: FormGroup;
+  errorMsg = '';
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private netlifyForms: NetlifyFormsService) {
     this._contactForm = this.formBuilder.group({
       name: ['', [
             Validators.required,
@@ -44,13 +46,20 @@ export class ContactComponent implements OnInit {
     const email = this._contactForm.value.email.trim();
     const subject = this._contactForm.value.subject.trim();
     const message = this._contactForm.value.message.trim();
-    alert('The form has sended');
-    this._contactForm.reset({
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
-    });
+    // alert('The form has sended');
+    this.netlifyForms.submitFeedback(this._contactForm.value).subscribe(
+      () => {
+        this._contactForm.reset({
+          name: '',
+          email: '',
+          subject: '',
+          message: '',
+        });
+      },
+      err => {
+        this.errorMsg = err
+      }
+    );
   }
 
 }
