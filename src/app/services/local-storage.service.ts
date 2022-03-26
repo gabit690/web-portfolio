@@ -33,4 +33,12 @@ export class LocalStorageService {
     localStorage.setItem('theme', isDark ? 'bright' : 'dark');
   }
 
+  presentationViewed(): boolean {
+    return localStorage.getItem('presentation') === 'viewed';
+  }
+
+  savePresentationViewed(): void {
+    localStorage.setItem('presentation', 'viewed');
+  }
+
 }

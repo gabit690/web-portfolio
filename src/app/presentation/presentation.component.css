@@ -1,0 +1,20 @@
+@keyframes typing {
+  from { width: 100% }
+  to { width: 0% }
+}
+
+@keyframes white-caret {
+  0%, 1% {border-right-color: transparent;}
+  2%, 100% {border-right-color: white;}
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-height: 319px) {
+  #presentation {
+    @apply absolute h-full;
+  }
+}

@@ -16,6 +16,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { FooterComponent } from './footer/footer.component';
 import { IntroductionComponent } from './pages/introduction/introduction.component';
+import { PresentationComponent } from './presentation/presentation.component';
 
 const routes: Route[] = [
   {path:'', component:IntroductionComponent},
@@ -38,6 +39,7 @@ const routes: Route[] = [
     ContactComponent,
     ErrorPageComponent,
     FooterComponent,
+    PresentationComponent,
   ],
   imports: [
     BrowserModule,
