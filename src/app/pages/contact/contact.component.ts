@@ -46,7 +46,6 @@ export class ContactComponent implements OnInit {
     const email = this._contactForm.value.email.trim();
     const subject = this._contactForm.value.subject.trim();
     const message = this._contactForm.value.message.trim();
-    // alert('The form has sended');
     this.netlifyForms.submitFeedback(this._contactForm.value).subscribe(
       () => {
         this._contactForm.reset({
@@ -60,6 +59,7 @@ export class ContactComponent implements OnInit {
         this.errorMsg = err
       }
     );
+    alert('The form has sended');
   }
 
 }
