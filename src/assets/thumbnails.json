@@ -15,7 +15,7 @@
     "title": "counter",
     "path": "./assets/img/counter-page.png",
     "alt": "Thumbnail counter page",
-    "page": "https://contador-react-redux.herokuapp.com/"
+    "page": "https://gabit-marcador.netlify.app/"
   },
   {
     "title": "drag and drop",
