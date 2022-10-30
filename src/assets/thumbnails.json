@@ -12,12 +12,6 @@
     "page": "https://gabit-javascript-calculator.netlify.app/"
   },
   {
-    "title": "contacts",
-    "path": "./assets/img/contacts-page.png",
-    "alt": "Thumbnail contacts page",
-    "page": "https://administrador-de-contactos.herokuapp.com/"
-  },
-  {
     "title": "counter",
     "path": "./assets/img/counter-page.png",
     "alt": "Thumbnail counter page",
@@ -28,12 +22,6 @@
     "path": "./assets/img/dragdrop-page.png",
     "alt": "Thumbnail drag and drop page",
     "page": "https://html-w3schools-projects.web.app/projects/drag-and-drop/drag-and-drop.html"
-  },
-  {
-    "title": "database",
-    "path": "./assets/img/database-page.png",
-    "alt": "Thumbnail database page",
-    "page": "https://practice-php-gabit.000webhostapp.com/tables/input.php"
   },
   {
     "title": "dexter",
