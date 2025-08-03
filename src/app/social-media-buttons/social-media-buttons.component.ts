@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-social-media-buttons',
@@ -10,7 +10,7 @@ export class SocialMediaButtonsComponent {
 
   private _githubIcon: any = faGithub;
   private _linkedinIcon: any = faLinkedin;
-  private _twitterIcon: any = faTwitter;
+
 
   constructor() {  }
 
@@ -21,9 +21,4 @@ export class SocialMediaButtonsComponent {
   get linkedin(): any {
     return this._linkedinIcon;
   }
-
-  get twitter(): any {
-    return this._twitterIcon;
-  }
-
 }
