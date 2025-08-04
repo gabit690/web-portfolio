@@ -6,22 +6,10 @@
     "page": "https://gabit690.github.io/web-argentina-activista/"
   },
   {
-    "title": "calculator",
-    "path": "./assets/img/calculator-page.png",
-    "alt": "Thumbnail calculator page",
-    "page": "https://gabit-javascript-calculator.netlify.app/"
-  },
-  {
-    "title": "counter",
-    "path": "./assets/img/counter-page.png",
-    "alt": "Thumbnail counter page",
-    "page": "https://gabit-marcador.netlify.app/"
-  },
-  {
-    "title": "drag and drop",
-    "path": "./assets/img/dragdrop-page.png",
-    "alt": "Thumbnail drag and drop page",
-    "page": "https://html-w3schools-projects.web.app/projects/drag-and-drop/drag-and-drop.html"
+    "title": "doraemon",
+    "path": "./assets/img/doraemon-page.png",
+    "alt": "Thumbnail Doraemon page",
+    "page": "https://gabit690.github.io/doraemon/"
   },
   {
     "title": "dexter",
@@ -42,22 +30,10 @@
     "page": "https://dibujo-parents-house.web.app/"
   },
   {
-    "title": "markdown",
-    "path": "./assets/img/markdown-page.png",
-    "alt": "Thumbnail markdown page",
-    "page": "https://fcc-md-previewer.herokuapp.com/"
-  },
-  {
     "title": "contrast",
     "path": "./assets/img/color-contrast-page.png",
     "alt": "Thumbnail color contrast page",
     "page": "https://gabit690.github.io/web-accessibility/projects/colorcontrast.html"
-  },
-  {
-    "title": "svg",
-    "path": "./assets/img/svg-page.png",
-    "alt": "Thumbnail svg page",
-    "page": "https://html-w3schools-projects.web.app/projects/svg/svg.html"
   },
   {
     "title": "stage",
