@@ -1,15 +1,15 @@
 [
   {
-    "title": "argentac",
-    "path": "./assets/img/argentac-page.png",
-    "alt": "Thumbnail argentina activista page",
-    "page": "https://gabit690.github.io/web-argentina-activista/"
-  },
-  {
     "title": "doraemon",
     "path": "./assets/img/doraemon-page.png",
     "alt": "Thumbnail Doraemon page",
     "page": "https://gabit690.github.io/doraemon/"
+  },
+  {
+    "title": "argentac",
+    "path": "./assets/img/argentac-page.png",
+    "alt": "Thumbnail argentina activista page",
+    "page": "https://gabit690.github.io/web-argentina-activista/"
   },
   {
     "title": "dexter",
